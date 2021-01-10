@@ -166,7 +166,7 @@ function configRoutes() {
                     name: 'Dashboard',
                     component: Dashboard,
                     meta: {
-                        requiresAdmin: true
+                        requiresUser: true
                     }
                 },
                 {
