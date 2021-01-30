@@ -139,6 +139,7 @@ class MenusTableSeeder extends Seeder
         $this->insertLink('guest', 'Login', '/login', 'cil-account-logout');
         $this->insertLink('guest', 'Register', '/register', 'cil-account-logout');
         $this->beginDropdown('admin', 'Settings', '/settings', 'cil-puzzle');
+            $this->insertLink('admin', 'Header navigation',    '/header-nav');
             $this->insertLink('admin', 'Media',    '/media');
             $this->insertLink('admin', 'Users',    '/users');
             $this->insertLink('admin', 'Menu',    '/menu');
@@ -161,7 +162,7 @@ class MenusTableSeeder extends Seeder
             $this->insertLink('user,admin', 'Pagination',    '/base/pagination');
             $this->insertLink('user,admin', 'Popovers',      '/base/popovers');
             $this->insertLink('user,admin', 'Progress',      '/base/progress');
-           // $this->insertLink('user,admin', 'Scrollspy',     '/base/scrollspy');  
+           // $this->insertLink('user,admin', 'Scrollspy',     '/base/scrollspy');
             $this->insertLink('user,admin', 'Switches',      '/base/switches');
             $this->insertLink('user,admin', 'Tables',        '/base/tables');
             $this->insertLink('user,admin', 'Tabs',          '/base/tabs');

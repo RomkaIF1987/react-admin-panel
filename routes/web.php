@@ -15,7 +15,7 @@ use App\Http\Menus\GetSidebarMenu;
 use App\Models\Menulist;
 
 Route::get('/', function () {
-    return view('api');
+    return view('frontend.home2');
 });
 
 Route::get('test', function (\Illuminate\Http\Request $request) {

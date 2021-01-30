@@ -104,6 +104,12 @@ const DeleteMenuElement = () => import('@/views/menuElements/DeleteMenuElement')
 
 const Media = () => import('@/views/media/Media')
 
+//Header Navigation
+const HeaderNavs = () => import('@/views/header-nav/HeaderNavs')
+const HeaderNav = () => import('@/views/header-nav/HeaderNav')
+const EditHeaderNav = () => import('@/views/header-nav/EditHeaderNav')
+const CreateHeaderNav = () => import('@/views/header-nav/CreateHeaderNav')
+const DeleteHeaderNav = () => import('@/views/header-nav/DeleteHeaderNav')
 
 Vue.use(Router)
 
@@ -422,6 +428,48 @@ function configRoutes() {
                             meta: {label: 'Delete Bread', requiresAdmin: true},
                             name: 'Delete Bread',
                             component: DeleteBread,
+                        },
+                    ]
+                },
+                {
+                    path: 'header-nav',
+                    meta: {label: 'Header navigation'},
+                    component: {
+                        render(c) {
+                            return c('router-view')
+                        }
+                    },
+                    children: [
+                        {
+                            path: '',
+                            component: HeaderNavs,
+                            /*meta: {
+                                requiresAdmin: true
+                            }*/
+                        },
+                        {
+                            path: 'create',
+                            meta: {label: 'Create Header Navigation', requiresAdmin: true},
+                            name: 'CreateHeaderNav',
+                            component: CreateHeaderNav,
+                        },
+                        {
+                            path: ':id',
+                            meta: {label: 'Header Navigation Details', requiresAdmin: true},
+                            name: 'HeaderNav',
+                            component: HeaderNav,
+                        },
+                        {
+                            path: ':id/edit',
+                            meta: {label: 'Edit Header Navigation', requiresAdmin: true},
+                            name: 'Edit Header Navigation',
+                            component: EditHeaderNav,
+                        },
+                        {
+                            path: ':id/delete',
+                            meta: {label: 'Delete Header Navigation', requiresAdmin: true},
+                            name: 'Delete Header Navigation',
+                            component: DeleteHeaderNav,
                         },
                     ]
                 },
