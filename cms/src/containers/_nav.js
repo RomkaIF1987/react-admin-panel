@@ -1,273 +1,322 @@
-export default [
+import React from 'react'
+import CIcon from '@coreui/icons-react'
+
+const _nav =  [
   {
-    _name: 'CSidebarNav',
+    _tag: 'CSidebarNavItem',
+    name: 'Dashboard',
+    to: '/dashboard',
+    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
+    badge: {
+      color: 'info',
+      text: 'NEW',
+    }
+  },
+  {
+    _tag: 'CSidebarNavTitle',
+    _children: ['Site Pages']
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Header Navigation',
+    to: '/site/header-navigation',
+    icon: 'cil-menu',
+  },
+  {
+    _tag: 'CSidebarNavTitle',
+    _children: ['Theme']
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Colors',
+    to: '/theme/colors',
+    icon: 'cil-drop',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Typography',
+    to: '/theme/typography',
+    icon: 'cil-pencil',
+  },
+  {
+    _tag: 'CSidebarNavTitle',
+    _children: ['Components']
+  },
+  {
+    _tag: 'CSidebarNavDropdown',
+    name: 'Base',
+    route: '/base',
+    icon: 'cil-puzzle',
     _children: [
       {
-        _name: 'CSidebarNavItem',
-        name: 'Dashboard',
-        to: '/dashboard',
-        icon: 'cil-speedometer',
-        badge: {
-          color: 'primary',
-          text: 'NEW'
-        }
+        _tag: 'CSidebarNavItem',
+        name: 'Breadcrumb',
+        to: '/base/breadcrumbs',
       },
       {
-        _name: 'CSidebarNavTitle',
-        _children: ['Theme']
+        _tag: 'CSidebarNavItem',
+        name: 'Cards',
+        to: '/base/cards',
       },
       {
-        _name: 'CSidebarNavItem',
-        name: 'Colors',
-        to: '/theme/colors',
-        icon: 'cil-drop'
+        _tag: 'CSidebarNavItem',
+        name: 'Carousel',
+        to: '/base/carousels',
       },
       {
-        _name: 'CSidebarNavItem',
-        name: 'Typography',
-        to: '/theme/typography',
-        icon: 'cil-pencil'
+        _tag: 'CSidebarNavItem',
+        name: 'Collapse',
+        to: '/base/collapses',
       },
       {
-        _name: 'CSidebarNavTitle',
-        _children: ['Components']
+        _tag: 'CSidebarNavItem',
+        name: 'Forms',
+        to: '/base/forms',
       },
       {
-        _name: 'CSidebarNavDropdown',
-        name: 'Base',
-        route: '/base',
-        icon: 'cil-puzzle',
-        items: [
-          {
-            name: 'Breadcrumbs',
-            to: '/base/breadcrumbs',
-            icon: 'cil-puzzle'
-          },
-          {
-            name: 'Cards',
-            to: '/base/cards',
-            icon: 'cil-puzzle'
-          },
-          {
-            name: 'Carousels',
-            to: '/base/carousels',
-            icon: 'cil-puzzle'
-          }, 
-          {
-            name: 'Collapses',
-            to: '/base/collapses',
-            icon: 'cil-puzzle'
-          },
-          {
-            name: 'Forms',
-            to: '/base/forms',
-            icon: 'cil-puzzle'
-          },
-          {
-            name: 'Jumbotrons',
-            to: '/base/jumbotrons',
-            icon: 'cil-puzzle'
-          },
-          {
-            name: 'List Groups',
-            to: '/base/list-groups',
-            icon: 'cil-puzzle'
-          },
-          {
-            name: 'Navs',
-            to: '/base/navs',
-            icon: 'cil-puzzle'
-          },
-          {
-            name: 'Navbars',
-            to: '/base/navbars',
-            icon: 'cil-puzzle'
-          },
-          {
-            name: 'Paginations',
-            to: '/base/paginations',
-            icon: 'cil-puzzle'
-          },
-          {
-            name: 'Popovers',
-            to: '/base/popovers',
-            icon: 'cil-puzzle'
-          },
-          {
-            name: 'Progress Bars',
-            to: '/base/progress-bars',
-            icon: 'cil-puzzle'
-          },
-          {
-            name: 'Switches',
-            to: '/base/switches',
-            icon: 'cil-puzzle'
-          },
-          {
-            name: 'Tables',
-            to: '/base/tables',
-            icon: 'cil-puzzle'
-          },
-          {
-            name: 'Tabs',
-            to: '/base/tabs',
-            icon: 'cil-puzzle'
-          },
-          {
-            name: 'Tooltips',
-            to: '/base/tooltips',
-            icon: 'cil-puzzle'
-          }
-        ]
+        _tag: 'CSidebarNavItem',
+        name: 'Jumbotron',
+        to: '/base/jumbotrons',
       },
       {
-        _name: 'CSidebarNavDropdown',
+        _tag: 'CSidebarNavItem',
+        name: 'List group',
+        to: '/base/list-groups',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Navs',
+        to: '/base/navs',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Navbars',
+        to: '/base/navbars',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Pagination',
+        to: '/base/paginations',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Popovers',
+        to: '/base/popovers',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Progress',
+        to: '/base/progress-bar',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Switches',
+        to: '/base/switches',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Tables',
+        to: '/base/tables',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Tabs',
+        to: '/base/tabs',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Tooltips',
+        to: '/base/tooltips',
+      },
+    ],
+  },
+  {
+    _tag: 'CSidebarNavDropdown',
+    name: 'Buttons',
+    route: '/buttons',
+    icon: 'cil-cursor',
+    _children: [
+      {
+        _tag: 'CSidebarNavItem',
         name: 'Buttons',
-        route: '/buttons',
-        icon: 'cil-cursor',
-        items: [
-          {
-            name: 'Buttons',
-            to: '/buttons/standard-buttons',
-            icon: 'cil-cursor'
-          },
-          {
-            name: 'Button Dropdowns',
-            to: '/buttons/dropdowns',
-            icon: 'cil-cursor'
-          },
-          {
-            name: 'Button Groups',
-            to: '/buttons/button-groups',
-            icon: 'cil-cursor'
-          },
-          {
-            name: 'Brand Buttons',
-            to: '/buttons/brand-buttons',
-            icon: 'cil-cursor'
-          }
-        ]
+        to: '/buttons/buttons',
       },
       {
-        _name: 'CSidebarNavItem',
-        name: 'Charts',
-        to: '/charts',
-        icon: 'cil-chart-pie'
+        _tag: 'CSidebarNavItem',
+        name: 'Brand buttons',
+        to: '/buttons/brand-buttons',
       },
       {
-        _name: 'CSidebarNavDropdown',
-        name: 'Icons',
-        route: '/icons',
-        icon: 'cil-star',
-        items: [
-          {
-            name: 'CoreUI Icons',
-            to: '/icons/coreui-icons',
-            icon: 'cil-star',
-            badge: {
-              color: 'info',
-              text: 'NEW'
-            }
-          },
-          {
-            name: 'Brands',
-            to: '/icons/brands',
-            icon: 'cil-star'
-          },
-          {
-            name: 'Flags',
-            to: '/icons/flags',
-            icon: 'cil-star'
-          }
-        ]
+        _tag: 'CSidebarNavItem',
+        name: 'Buttons groups',
+        to: '/buttons/button-groups',
       },
       {
-        _name: 'CSidebarNavDropdown',
-        name: 'Notifications',
-        route: '/notifications',
-        icon: 'cil-bell',
-        items: [
-          {
-            name: 'Alerts',
-            to: '/notifications/alerts',
-            icon: 'cil-bell'
-          },
-          {
-            name: 'Badges',
-            to: '/notifications/badges',
-            icon: 'cil-bell'
-          },
-          {
-            name: 'Modals',
-            to: '/notifications/modals',
-            icon: 'cil-bell'
-          }
-        ]
-      },
+        _tag: 'CSidebarNavItem',
+        name: 'Dropdowns',
+        to: '/buttons/button-dropdowns',
+      }
+    ],
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Charts',
+    to: '/charts',
+    icon: 'cil-chart-pie'
+  },
+  {
+    _tag: 'CSidebarNavDropdown',
+    name: 'Icons',
+    route: '/icons',
+    icon: 'cil-star',
+    _children: [
       {
-        _name: 'CSidebarNavItem',
-        name: 'Widgets',
-        to: '/widgets',
-        icon: 'cil-calculator',
+        _tag: 'CSidebarNavItem',
+        name: 'CoreUI Free',
+        to: '/icons/coreui-icons',
         badge: {
-          color: 'primary',
+          color: 'success',
           text: 'NEW',
-          shape: 'pill'
-        }
+        },
       },
       {
-        _name: 'CSidebarNavDivider',
-        _class: 'm-2'
+        _tag: 'CSidebarNavItem',
+        name: 'CoreUI Flags',
+        to: '/icons/flags',
       },
       {
-        _name: 'CSidebarNavTitle',
-        _children: ['Extras']
+        _tag: 'CSidebarNavItem',
+        name: 'CoreUI Brands',
+        to: '/icons/brands',
+      },
+    ],
+  },
+  {
+    _tag: 'CSidebarNavDropdown',
+    name: 'Notifications',
+    route: '/notifications',
+    icon: 'cil-bell',
+    _children: [
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Alerts',
+        to: '/notifications/alerts',
       },
       {
-        _name: 'CSidebarNavDropdown',
-        name: 'Pages',
-        route: '/pages',
-        icon: 'cil-star',
-        items: [
-          {
-            name: 'Login',
-            to: '/pages/login',
-            icon: 'cil-star'
-          },
-          {
-            name: 'Register',
-            to: '/pages/register',
-            icon: 'cil-star'
-          },
-          {
-            name: 'Error 404',
-            to: '/pages/404',
-            icon: 'cil-star'
-          },
-          {
-            name: 'Error 500',
-            to: '/pages/500',
-            icon: 'cil-star'
-          }
-        ]
+        _tag: 'CSidebarNavItem',
+        name: 'Badges',
+        to: '/notifications/badges',
       },
       {
-        _name: 'CSidebarNavItem',
-        name: 'Download CoreUI',
-        href: 'http://coreui.io/vue/',
-        icon: { name: 'cil-cloud-download', class: 'text-white' },
-        _class: 'bg-success text-white',
-        target: '_blank'
+        _tag: 'CSidebarNavItem',
+        name: 'Modal',
+        to: '/notifications/modals',
       },
       {
-        _name: 'CSidebarNavItem',
-        name: 'Try CoreUI PRO',
-        href: 'http://coreui.io/pro/vue/',
-        icon: { name: 'cil-layers', class: 'text-white' },
-        _class: 'bg-danger text-white',
-        target: '_blank'
+        _tag: 'CSidebarNavItem',
+        name: 'Toaster',
+        to: '/notifications/toaster'
       }
     ]
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Widgets',
+    to: '/widgets',
+    icon: 'cil-calculator',
+    badge: {
+      color: 'info',
+      text: 'NEW',
+    },
+  },
+  {
+    _tag: 'CSidebarNavDivider'
+  },
+  {
+    _tag: 'CSidebarNavTitle',
+    _children: ['Extras'],
+  },
+  {
+    _tag: 'CSidebarNavDropdown',
+    name: 'Pages',
+    route: '/pages',
+    icon: 'cil-star',
+    _children: [
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Login',
+        to: '/login',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Register',
+        to: '/register',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Error 404',
+        to: '/404',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Error 500',
+        to: '/500',
+      },
+    ],
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Disabled',
+    icon: 'cil-ban',
+    badge: {
+      color: 'secondary',
+      text: 'NEW',
+    },
+    addLinkClass: 'c-disabled',
+    'disabled': true
+  },
+  {
+    _tag: 'CSidebarNavDivider',
+    className: 'm-2'
+  },
+  {
+    _tag: 'CSidebarNavTitle',
+    _children: ['Labels']
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Label danger',
+    to: '',
+    icon: {
+      name: 'cil-star',
+      className: 'text-danger'
+    },
+    label: true
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Label info',
+    to: '',
+    icon: {
+      name: 'cil-star',
+      className: 'text-info'
+    },
+    label: true
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Label warning',
+    to: '',
+    icon: {
+      name: 'cil-star',
+      className: 'text-warning'
+    },
+    label: true
+  },
+  {
+    _tag: 'CSidebarNavDivider',
+    className: 'm-2'
   }
 ]
 
+export default _nav

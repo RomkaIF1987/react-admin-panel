@@ -176,7 +176,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
         App\Repositories\FoldersAndFiles\FoldersAndFilesServiceProvider::class,
+        App\Repositories\HeaderNavigation\HeaderNavigationServiceProvider::class,
     ],
 
     /*

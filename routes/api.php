@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HeaderNavController;
 use Illuminate\Http\Request;
 
 /*
@@ -14,11 +15,8 @@ use Illuminate\Http\Request;
 */
 
 Route::get('test', 'MenuEditController@index');
-
-        Route::resource('header-nav', 'HeaderNavController')->except('create');
-Route::resource('bread', 'BreadController');   //create BREAD (resource)
-
-
+Route::get('header-nav/parent-items', [HeaderNavController::class, 'parentItems']);
+Route::resource('header-nav', 'HeaderNavController')->except('create');
 
 Route::group(['middleware' => 'api'], function ($router) {
     Route::get('menu', 'MenuController@index');
@@ -39,7 +37,8 @@ Route::group(['middleware' => 'api'], function ($router) {
         Route::post('mailSend/{id}', 'MailController@send')->name('mailSend');
 
 //        Route::resource('header-nav', 'HeaderNavController')->except('create');
-//        Route::resource('bread', 'BreadController');   //create BREAD (resource)
+
+        Route::resource('bread', 'BreadController');   //create BREAD (resource)
 
         Route::resource('users', 'UsersController')->except(['create', 'store']);
 
@@ -69,7 +68,7 @@ Route::group(['middleware' => 'api'], function ($router) {
             Route::post('/folder/update', 'MediaController@folderUpdate')->name('media.folder.update');
             Route::get('/folder', 'MediaController@folder')->name('media.folder');
             Route::post('/folder/move', 'MediaController@folderMove')->name('media.folder.move');
-            Route::post('/folder/delete', 'MediaController@folderDelete')->name('media.folder.delete');;
+            Route::post('/folder/delete', 'MediaController@folderDelete')->name('media.folder.delete');
 
             Route::post('/file/store', 'MediaController@fileAdd')->name('media.file.add');
             Route::get('/file', 'MediaController@file');

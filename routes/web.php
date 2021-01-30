@@ -11,14 +11,14 @@
 |
 */
 
+use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Menus\GetSidebarMenu;
 use App\Models\Menulist;
+use Illuminate\Http\Request;
 
-Route::get('/', function () {
-    return view('frontend.home2');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('test', function (\Illuminate\Http\Request $request) {
+Route::get('test', function (Request $request) {
     if($request->has('menu')){
         $menuName = $request->input('menu');
     }else{

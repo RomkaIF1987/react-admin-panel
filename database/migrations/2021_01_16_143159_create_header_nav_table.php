@@ -17,6 +17,8 @@ class CreateHeaderNavTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('link_url');
+            $table->boolean('is_dropdown')->default(false);
+            $table->integer('parent_id')->nullable();
             $table->boolean('show')->default(false);
             $table->boolean('edit')->default(false);
             $table->boolean('delete')->default(false);

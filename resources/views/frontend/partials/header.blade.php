@@ -18,34 +18,24 @@
                             </button>
                             <div id="navbar">
                                 <ul>
-                                    <li><a class="page-scroll" href="index.html">Home</a></li>
-                                    <li><a href="#">Our Another Page <i class="fa fa-angle-down"></i></a>
-                                        <ul>
-                                            <li><a class="page-scroll" href="#tm_sec">Our Team</a></li>
-                                            <li><a class="page-scroll" href="#tstm_sec">Our Testimonial</a></li>
-                                            <li><a class="page-scroll" href="#lts_sec">Our Latest Blog</a></li>
-                                            <li><a class="page-scroll" href="#pricing_sec">Pricing</a></li>
-                                            <li><a class="page-scroll" href="#clt_sec">Our Happy Client</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li><a href="#">Static Page<i class="fa fa-angle-down"></i></a>
-                                        <ul>
-                                            <li><a class="page-scroll" href="blog.html">Blog Page</a></li>
-                                            <li><a class="page-scroll" href="single.html">Single Blog Page</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li><a class="page-scroll" href="#abt_sec">About</a></li>
-                                    <li><a class="page-scroll" href="#skill_sec">Our Skill</a></li>
-                                    <li><a class="page-scroll" href="#pr_sec">Our Service</a></li>
-                                    <li><a class="page-scroll" href="#protfolio_sec">Our Portfolio</a></li>
-                                    <li><a class="page-scroll" href="#ctn_sec">Contact Us</a></li>
+                                    @foreach($header_navs as $header_nav)
+                                        @if(!$header_nav->is_dropdown)
+                                            <li>
+                                                <a class="page-scroll" href="{{$header_nav->link_url}}">{{$header_nav->name}}@if(count($header_nav->sub_items))<i class="fa fa-angle-down"></i>@endif</a>
+                                                @if($header_nav->sub_items)
+                                                    @foreach($header_nav->sub_items as $child_header_nav)
+                                                        <ul>
+                                                            <li><a class="page-scroll" href="{{$child_header_nav->link_url}}">{{$child_header_nav->name}}</a></li>
+                                                        </ul>
+                                                    @endforeach
+                                                @endif
+                                            </li>
+                                        @endif
+                                    @endforeach
                                 </ul>
                             </div>
                         </nav>
                     </div>
-
                 </div>
             </div>
         </div>

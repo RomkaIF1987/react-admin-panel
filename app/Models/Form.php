@@ -11,8 +11,8 @@ class Form extends Model
     /**
      * Get the model that owns the Form.
      */
-    public function model()
+    /*public function model()
     {
         return $this->belongsTo('App\Models\Models', 'model_id');
-    }
+    }*/
 }
