@@ -32,6 +32,18 @@ const Users = () => {
   const pageChange = newPage => {
     currentPage !== newPage && history.push(`/users?page=${newPage}`)
   }
+/*
+
+    useEffect(() => {
+        fetch(process.env.REACT_APP_API_URL + '/users?token=' + JSON.parse(localStorage.getItem("token")))
+            .then(handleErrors)
+            .then(response => response.json())
+            .then(headerNavs => setHeaderNavs(headerNavs))
+            .catch((error) => {
+                console.log(error);
+            });
+    }, []);
+*/
 
   useEffect(() => {
     currentPage !== page && setPage(currentPage)
@@ -73,7 +85,7 @@ const Users = () => {
             activePage={page}
             onActivePageChange={pageChange}
             pages={5}
-            doubleArrows={false} 
+            doubleArrows={false}
             align="center"
           />
           </CCardBody>

@@ -7,3 +7,10 @@
   color: #4f5d73;
   background-color: #ced2d8;
 }
+
+.table th {
+    border-top: none;
+}
+.table td {
+    vertical-align: middle;
+}

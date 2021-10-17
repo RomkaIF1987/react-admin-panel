@@ -16,7 +16,6 @@ use Illuminate\Http\Request;
 
 Route::get('test', 'MenuEditController@index');
 Route::get('header-nav/parent-items', [HeaderNavController::class, 'parentItems']);
-Route::resource('header-nav', 'HeaderNavController')->except('create');
 
 Route::group(['middleware' => 'api'], function ($router) {
     Route::get('menu', 'MenuController@index');
@@ -36,7 +35,7 @@ Route::group(['middleware' => 'api'], function ($router) {
         Route::get('prepareSend/{id}', 'MailController@prepareSend')->name('prepareSend');
         Route::post('mailSend/{id}', 'MailController@send')->name('mailSend');
 
-//        Route::resource('header-nav', 'HeaderNavController')->except('create');
+        Route::resource('header-nav', 'HeaderNavController')->except('create');
 
         Route::resource('bread', 'BreadController');   //create BREAD (resource)
 

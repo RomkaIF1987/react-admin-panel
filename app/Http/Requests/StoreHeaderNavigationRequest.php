@@ -26,6 +26,8 @@ class StoreHeaderNavigationRequest extends FormRequest
         return [
             'name' => 'required|string|max:255',
             'link_url' => 'required|string|max:255',
+            'is_dropdown' => 'required|boolean',
+            'parent_id' => 'string',
             'show' => 'required|boolean',
             'edit' => 'required|boolean',
             'delete' => 'required|boolean',

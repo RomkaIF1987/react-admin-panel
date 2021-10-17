@@ -67,8 +67,9 @@ function Login({setToken}) {
       email: login.value(),
       password: password.value(),
     });
-    if (data.access_token && data.status) {
-      setToken(data);
+    if (data && data.access_token && data.status) {
+      setToken(data.access_token);
+      localStorage.setItem('roles', data.roles);
     }
   }
 

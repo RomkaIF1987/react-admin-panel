@@ -7,16 +7,27 @@ const _nav =  [
     name: 'Dashboard',
     to: '/dashboard',
     icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
-    badge: {
-      color: 'info',
-      text: 'NEW',
+  },
+   {
+    _tag: 'CSidebarNavItem',
+    name: 'Users',
+    to: '/users',
+    icon: 'cil-user',
+  },
+    {
+        _tag: 'CSidebarNavDropdown',
+        name: 'Global Settings',
+        route: '/base',
+        icon: 'cil-settings',
+        _children: [
+            {
+                _tag: 'CSidebarNavItem',
+                name: 'Header Navigation',
+                to: '/site/header-navigation',
+            }
+        ]
     }
-  },
-  {
-    _tag: 'CSidebarNavTitle',
-    _children: ['Site Pages']
-  },
-  {
+  /*{
     _tag: 'CSidebarNavItem',
     name: 'Header Navigation',
     to: '/site/header-navigation',
@@ -316,7 +327,7 @@ const _nav =  [
   {
     _tag: 'CSidebarNavDivider',
     className: 'm-2'
-  }
+  }*/
 ]
 
 export default _nav

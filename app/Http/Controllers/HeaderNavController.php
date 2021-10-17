@@ -45,13 +45,15 @@ class HeaderNavController extends Controller
      * @param Request $request
      * @return HeaderNav
      */
-    public function store(StoreHeaderNavigationRequest $request)
+    public function store(Request $request)
     {
         $data = $request->all();
 
         $headerNav = new HeaderNav();
         $headerNav->name = $data['name'];
         $headerNav->link_url = $data['link_url'];
+        $headerNav->is_dropdown = $data['is_dropdown'];
+        $headerNav->parent_id = $data['parent_id'];
         $headerNav->show = $data['show'];
         $headerNav->edit = $data['edit'];
         $headerNav->delete = $data['delete'];

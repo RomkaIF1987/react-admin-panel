@@ -1,297 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="32ad1b75-7872-4891-ab2d-f295b7bc54e7" name="Default Changelist" comment="First commit">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vue-admin.loc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vue-admin.loc.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cms/src/assets/icons/cms-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cms/src/http-common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cms/src/services/baseCRUDService/baseCRUDService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cms/src/services/baseCRUDService/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HeaderNavController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HeaderNavController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Form.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/HeaderNav.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/HeaderNav.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/.eslintrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/cms/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/.postcssrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/cms/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/CONTRIBUTING.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/ISSUE_TEMPLATE.md" beforeDir="false" afterPath="$PROJECT_DIR$/cms/ISSUE_TEMPLATE.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/cms/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/jest.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/StoreHeaderNavigationRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/StoreHeaderNavigationRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/cms/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cms/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cms/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/android-icon-144x144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/android-icon-192x192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/android-icon-36x36.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/android-icon-48x48.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/android-icon-72x72.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/android-icon-96x96.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/apple-icon-114x114.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/apple-icon-120x120.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/apple-icon-144x144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/apple-icon-152x152.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/apple-icon-180x180.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/apple-icon-57x57.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/apple-icon-60x60.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/apple-icon-72x72.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/apple-icon-76x76.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/apple-icon-precomposed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/apple-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/browserconfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/favicon-16x16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/favicon-32x32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/favicon-96x96.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/img/avatars/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/img/avatars/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/img/avatars/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/img/avatars/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/img/avatars/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/img/avatars/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/img/avatars/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/img/avatars/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/img/brand/coreui-base-white.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/img/brand/coreui-base.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/img/brand/coreui-signet-white.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/img/brand/coreui-signet.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/img/brand/coreui-vue-logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/cms/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/cms/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/ms-icon-144x144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/ms-icon-150x150.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/ms-icon-310x310.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/ms-icon-70x70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/public/public/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/assets/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/assets/icons/icons.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/assets/icons/logo.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/assets/icons/logo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/assets/scss/_custom.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/assets/scss/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/assets/scss/style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/containers/Menu.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/containers/TheContainer.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/containers/TheFooter.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/containers/TheHeader.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/containers/TheHeaderDropdownAccnt.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/containers/TheSidebar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/src/components/useToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/components/useToken.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/src/containers/TheSidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/containers/TheSidebar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/src/containers/_nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/containers/_nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/router/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/Dashboard.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/Breadcrumbs.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/Cards.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/Carousels.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/Collapses.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/Forms.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/Jumbotrons.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/ListGroups.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/Navbars.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/Navs.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/Paginations.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/Popovers.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/ProgressBars.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/Switches.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/Table.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/Tables.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/Tabs.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/Tooltips.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/bread/Bread.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/bread/Breads.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/bread/CreateBread.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/bread/CreateBreadFieldCard.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/bread/DeleteBread.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/bread/EditBread.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/bread/EditBreadFieldCard.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/bread/ShowBreadFieldCard.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/buttons/BrandButtons.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/buttons/ButtonGroups.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/buttons/Dropdowns.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/buttons/StandardButtons.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/charts/CChartBarExample.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/charts/CChartBarSimple.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/charts/CChartDoughnutExample.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/charts/CChartLineExample.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/charts/CChartLineSimple.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/charts/CChartPieExample.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/charts/CChartPolarAreaExample.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/charts/CChartRadarExample.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/charts/Charts.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/charts/MainChartExample.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/charts/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/dashboard/MainChartExample.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/email/CreateEmail.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/email/EditEmail.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/email/Emails.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/email/SendEmail.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/email/ShowEmail.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/header-nav/CreateHeaderNav.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/header-nav/DeleteHeaderNav.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/header-nav/EditHeaderNav.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/header-nav/HeaderNav.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/header-nav/HeaderNavs.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/icons/Brands.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/icons/CoreUIIcons.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/icons/Flags.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/media/Media.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/menu/CreateMenu.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/menu/DeleteMenu.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/menu/EditMenu.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/menu/EditMenu_old.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/menu/MenuIndex.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/menuElements/CreateMenuElement.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/menuElements/DeleteMenuElement.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/menuElements/EditMenuElement.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/menuElements/EditMenu_old.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/menuElements/ElementsIndex.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/menuElements/ShowMenuElement.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/notes/CreateNote.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/notes/EditNote.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/notes/Note.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/notes/Notes.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/notifications/Alerts.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/notifications/Badges.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/notifications/Modals.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/pages/Login.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/pages/Page404.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/pages/Page500.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/pages/Register.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/resources/CreateResourceField.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/resources/CreateResources.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/resources/DeleteResource.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/resources/EditResource.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/resources/Resource.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/resources/Resources.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/resources/UpdateResourceField.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/roles/CreateRole.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/roles/EditRole.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/roles/Role.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/roles/Roles.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/theme/ColorTheme.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/theme/ColorView.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/theme/Colors.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/theme/Typography.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/users/EditUser.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/users/User.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/users/Users.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/users/UsersData.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/users/UsersData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/widgets/Widgets.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/widgets/WidgetsBrand.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/widgets/WidgetsDropdown.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/e2e/custom-assertions/custom-assertion.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/e2e/custom-commands/custom-command.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/e2e/page-objects/page-object.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/e2e/specs/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/.eslintrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/App.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/containers/DefaultAside.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/containers/DefaultContainer.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/containers/DefaultHeaderDropdownAccnt.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/containers/TheContainer.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/containers/TheFooter.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/containers/TheHeader.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/containers/TheHeaderDropdownAccnt.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/containers/TheSidebar.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/containers/__snapshots__/TheContainer.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/containers/__snapshots__/TheFooter.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/containers/__snapshots__/TheHeader.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/containers/__snapshots__/TheHeaderDropdownAccnt.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/containers/__snapshots__/TheSidebar.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/shared/classes.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/shared/toggle-classes.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/shared/utils.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/Charts.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/Dashboard.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/Widgets.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/__snapshots__/Dashboard.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/Breadcrumbs.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/Cards.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/Carousels.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/Collapses.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/Forms.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/Jumbotrons.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/ListGroups.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/Navbars.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/Navs.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/Paginations.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/Popovers.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/ProgressBars.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/Switches.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/Table.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/Tables.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/Tabs.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/Tooltips.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/__snapshots__/Breadcrumbs.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/__snapshots__/Cards.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/__snapshots__/Carousels.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/__snapshots__/Collapses.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/__snapshots__/Jumbotrons.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/__snapshots__/ListGroups.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/__snapshots__/Navbars.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/__snapshots__/Navs.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/__snapshots__/Paginations.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/__snapshots__/ProgressBars.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/__snapshots__/Switches.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/__snapshots__/Table.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/__snapshots__/Tables.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/__snapshots__/Tabs.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/base/__snapshots__/Tooltips.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/buttons/BrandButtons.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/buttons/ButtonDropdowns.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/buttons/ButtonGroups.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/buttons/StandardButtons.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/buttons/__snapshots__/BrandButtons.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/buttons/__snapshots__/ButtonDropdowns.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/buttons/__snapshots__/ButtonGroups.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/buttons/__snapshots__/StandardButtons.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/charts/Charts.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/charts/Charts.spec.js~0aaae3d34d2de5d04e10a3272dd84d7d5232e397" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/charts/Charts.spec.js~HEAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/charts/__snapshots__/Charts.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/icons/Brands.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/icons/CoreUIIcons.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/icons/Flags.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/icons/FontAwesome.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/icons/SimpleLineIcons.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/icons/__snapshots__/Brands.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/icons/__snapshots__/CoreUIIcons.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/icons/__snapshots__/Flags.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/notifications/Alerts.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/notifications/Badges.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/notifications/Modals.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/notifications/__snapshots__/Alerts.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/notifications/__snapshots__/Badges.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/notifications/__snapshots__/Modals.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/pages/Login.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/pages/Page404.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/pages/Page500.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/pages/Register.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/pages/__snapshots__/Login.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/pages/__snapshots__/Page404.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/pages/__snapshots__/Page500.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/pages/__snapshots__/Register.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/theme/Colors.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/theme/Typography.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/theme/__snapshots__/Colors.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/theme/__snapshots__/Typography.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/users/User.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/users/Users.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/users/__snapshots__/User.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/users/__snapshots__/Users.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/widgets/Widgets.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/tests/unit/views/widgets/__snapshots__/Widgets.spec.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/vue.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/src/scss/_custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/scss/_custom.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/src/views/pages/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/pages/login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/src/views/site/HeaderNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/site/HeaderNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/src/views/site/HeaderNavigationCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/site/HeaderNavigationCreate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/src/views/users/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/users/Users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_16_143159_create_header_nav_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_16_143159_create_header_nav_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/home2.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partials/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partials/scripts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partials/scripts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,7 +41,12 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="EditorConfigPreviewManager">
+    <editorConfig file="$PROJECT_DIR$/cms/.editorconfig" previewFile="$PROJECT_DIR$/cms/src/views/site/HeaderNavigationCreate.js" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -310,9 +56,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="main" />
+  </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Roman Zhylyak &lt;45605216+romkaif1987@users.noreply.github.com&gt;" />
         <option value="Roman Zhyliak &lt;romka.if87@gmail.com&gt;" />
       </list>
     </option>
@@ -401,7 +151,6 @@
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
       <path value="$PROJECT_DIR$/vendor/spatie/image-optimizer" />
       <path value="$PROJECT_DIR$/vendor/spatie/image" />
-      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
       <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
@@ -462,6 +211,14 @@
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/vendor/dflydev/dot-access-data" />
+      <path value="$PROJECT_DIR$/vendor/nette/schema" />
+      <path value="$PROJECT_DIR$/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/league/config" />
+      <path value="$PROJECT_DIR$/vendor/laravel/serializable-closure" />
     </include_path>
   </component>
   <component name="ProjectId" id="1mqPGhYMXccFpSmVaLdD48OiqHG" />
@@ -477,7 +234,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/cms/src/views/site" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cms/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -488,19 +245,22 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cms/src" />
+      <recent name="$PROJECT_DIR$/cms/src/assets/icons" />
       <recent name="$PROJECT_DIR$/cms/src/views/site" />
       <recent name="$PROJECT_DIR$/app/Repositories/HeaderNavigation" />
       <recent name="$PROJECT_DIR$/app/Repositories/HeadersNavigation" />
-      <recent name="$PROJECT_DIR$/app/Repositories" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/Frontend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cms/src/views/site" />
+      <recent name="$PROJECT_DIR$/cms/src/views/site/header-navigation-create" />
+      <recent name="$PROJECT_DIR$/cms/src/views/site/header-navigation" />
       <recent name="$PROJECT_DIR$/app/Http/Resources/HeaderNavigation" />
     </key>
   </component>
@@ -508,8 +268,10 @@
     <option name="myCommands">
       <command value="open rocket-lister.loc" />
       <command value="open vue-admin.loc" />
-      <command value="open jewelry.loc" />
       <command value="open react-test.loc" />
+      <command value="open jewelry.loc" />
+      <command value="open goryzonty2.loc" />
+      <command value="open nsa.loc" />
     </option>
   </component>
   <component name="RunManager" selected="npm.start">
@@ -525,8 +287,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="npm.start" />
+      <item itemvalue="PHPUnit.phpunit.xml" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -559,7 +321,28 @@
       <workItem from="1616998249183" duration="797000" />
       <workItem from="1617439062211" duration="127000" />
       <workItem from="1617479810428" duration="6417000" />
-      <workItem from="1617528147291" duration="18738000" />
+      <workItem from="1617528147291" duration="24854000" />
+      <workItem from="1617568222301" duration="4171000" />
+      <workItem from="1617651193141" duration="2756000" />
+      <workItem from="1617732818008" duration="6407000" />
+      <workItem from="1618049780009" duration="189000" />
+      <workItem from="1618052271902" duration="342000" />
+      <workItem from="1618251070988" duration="975000" />
+      <workItem from="1618335257116" duration="2309000" />
+      <workItem from="1618650488939" duration="38000" />
+      <workItem from="1618766955536" duration="28000" />
+      <workItem from="1618767214825" duration="19000" />
+      <workItem from="1619119004577" duration="52000" />
+      <workItem from="1619275090218" duration="125000" />
+      <workItem from="1619278127353" duration="1923000" />
+      <workItem from="1619290345991" duration="19000" />
+      <workItem from="1619354262745" duration="28000" />
+      <workItem from="1627218540466" duration="2346000" />
+      <workItem from="1628712557830" duration="210000" />
+      <workItem from="1629015625679" duration="157000" />
+      <workItem from="1629015852123" duration="26000" />
+      <workItem from="1634380075874" duration="896000" />
+      <workItem from="1634465207350" duration="13322000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1610281136953</created>
@@ -575,11 +358,35 @@
       <option name="project" value="LOCAL" />
       <updated>1617548030204</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="First commit">
+      <created>1617550181562</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617550181562</updated>
+    </task>
+    <task id="LOCAL-00004" summary="First commit">
+      <created>1617550189388</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1617550189388</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -599,5 +406,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First commit" />
     <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
