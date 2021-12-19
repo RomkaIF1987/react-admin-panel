@@ -3,7 +3,6 @@ import React from 'react';
 const HeaderNavigation = React.lazy(() => import('./views/site/HeaderNavigation'));
 const HeaderNavigationCreate = React.lazy(() => import('./views/site/HeaderNavigationCreate'));
 
-
 const Toaster = React.lazy(() => import('./views/notifications/toaster/Toaster'));
 const Tables = React.lazy(() => import('./views/base/tables/Tables'));
 
@@ -45,8 +44,8 @@ const User = React.lazy(() => import('./views/users/User'));
 const routes = [
   { path: '/', exact: true, name: 'Home' },
 
-  { path: '/site/header-navigation', exact: true, name: 'Header Navigation', component: HeaderNavigation },
-  { path: '/site/header-navigation/create', exact: true, name: 'Header Navigation Create', component: HeaderNavigationCreate },
+  { path: '/global-settings/header-navigation', exact: true, name: 'Header Navigation', component: HeaderNavigation },
+  { path: '/global-settings/header-navigation/create', exact: true, name: 'Header Navigation Create', component: HeaderNavigationCreate },
 
 
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },

@@ -17,13 +17,13 @@ const _nav =  [
     {
         _tag: 'CSidebarNavDropdown',
         name: 'Global Settings',
-        route: '/base',
+        route: '/global-settings',
         icon: 'cil-settings',
         _children: [
             {
                 _tag: 'CSidebarNavItem',
                 name: 'Header Navigation',
-                to: '/site/header-navigation',
+                to: '/global-settings/header-navigation',
             }
         ]
     }

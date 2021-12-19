@@ -15,10 +15,11 @@ use Illuminate\Http\Request;
 */
 
 Route::get('test', 'MenuEditController@index');
-Route::get('header-nav/parent-items', [HeaderNavController::class, 'parentItems']);
 
 Route::group(['middleware' => 'api'], function ($router) {
     Route::get('menu', 'MenuController@index');
+
+    Route::get('header-nav/parent-items', [HeaderNavController::class, 'parentItems']);
 
     Route::post('login', 'AuthController@login');
     Route::post('logout', 'AuthController@logout');

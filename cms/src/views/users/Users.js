@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useHistory, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import {
   CBadge,
   CCard,
@@ -8,10 +8,11 @@ import {
   CCol,
   CDataTable,
   CRow,
-  CPagination
+  CLink
 } from '@coreui/react'
 
-import usersData from './UsersData'
+import baseCRUDService from "../../services/baseCRUDService/baseCRUDService";
+import CIcon from "@coreui/icons-react";
 
 const getBadge = status => {
   switch (status) {
@@ -24,70 +25,76 @@ const getBadge = status => {
 }
 
 const Users = () => {
-  const history = useHistory()
-  const queryPage = useLocation().search.match(/page=([0-9]+)/, '')
-  const currentPage = Number(queryPage && queryPage[1] ? queryPage[1] : 1)
-  const [page, setPage] = useState(currentPage)
+  const queryPage = useLocation().search.match(/page=([0-9]+)/, '');
+  const currentPage = Number(queryPage && queryPage[1] ? queryPage[1] : 1);
+  const [page, setPage] = useState(currentPage);
+  const [users, setUsers] = useState([]);
 
-  const pageChange = newPage => {
-    currentPage !== newPage && history.push(`/users?page=${newPage}`)
-  }
-/*
-
-    useEffect(() => {
-        fetch(process.env.REACT_APP_API_URL + '/users?token=' + JSON.parse(localStorage.getItem("token")))
-            .then(handleErrors)
-            .then(response => response.json())
-            .then(headerNavs => setHeaderNavs(headerNavs))
-            .catch((error) => {
-                console.log(error);
-            });
-    }, []);
-*/
+  useEffect(async () => {
+    baseCRUDService.setApiUrl('/users');
+    await baseCRUDService.getRecords()
+      .then(response => setUsers(response.users))
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   useEffect(() => {
     currentPage !== page && setPage(currentPage)
   }, [currentPage, page])
 
+  const styles = {
+    button: {
+      width: '150px',
+      float: 'right'
+    }
+  }
+
   return (
     <CRow>
-      <CCol xl={6}>
+      <CCol>
         <CCard>
           <CCardHeader>
             Users
-            <small className="text-muted"> example</small>
+            <div className="mb-3 mb-xl-0 col-sm-4 col-md-2 col-xl" style={styles.button}>
+              <CLink to='/site/header-navigation/create'
+                     className="btn btn-outline-success btn-block">Add New User</CLink>
+            </div>
           </CCardHeader>
           <CCardBody>
-          <CDataTable
-            items={usersData}
-            fields={[
-              { key: 'name', _classes: 'font-weight-bold' },
-              'registered', 'role', 'status'
-            ]}
-            hover
-            striped
-            itemsPerPage={5}
-            activePage={page}
-            clickableRows
-            onRowClick={(item) => history.push(`/users/${item.id}`)}
-            scopedSlots = {{
-              'status':
-                (item)=>(
-                  <td>
-                    <CBadge color={getBadge(item.status)}>
-                      {item.status}
-                    </CBadge>
-                  </td>
-                )
-            }}
-          />
-          <CPagination
-            activePage={page}
-            onActivePageChange={pageChange}
-            pages={5}
-            doubleArrows={false}
-            align="center"
-          />
+            <CDataTable
+              items={users}
+              fields={[
+                { key: 'name', _classes: 'font-weight-bold' },
+                'email', 'roles', 'status', 'action'
+              ]}
+              hover
+              striped
+              bordered
+              size="sm"
+              itemsPerPage={10}
+              pagination
+              scopedSlots={{
+                'status':
+                  (item) => (
+                    <td>
+                      <CBadge color={getBadge(item.show)}>
+                        {getBadge(item.show)}
+                      </CBadge>
+                    </td>
+                  ),
+                'action':
+                  (item) => (
+                    <td width={"15%"}>
+                      <div className="btn-group" role="group">
+                        <a href={process.env.REACT_APP_API_URL + '/header-nav/' + item.id}
+                           className="btn" type="button"><CIcon name="cil-pencil" className="mfe-2"/></a>
+                        <button className="btn" type="button"><CIcon name="cil-trash" className="mfe-2"/></button>
+                      </div>
+                    </td>
+                  ),
+              }}
+            />
           </CCardBody>
         </CCard>
       </CCol>

@@ -15,6 +15,7 @@ import {
   CRow
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
+import http, { baseApiURL } from '../../../http-common';
 
 function useLoginValue(defaultValue = '') {
   const [login, setLogin] = useState(defaultValue)
@@ -43,14 +44,8 @@ function usePasswordValue(defaultValue = '') {
 }
 
 async function loginUser(credentials) {
-  return fetch(process.env.REACT_APP_API_URL + '/login', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(credentials)
-  })
-    .then(data => data.json())
+  return http.post(`${baseApiURL}/login`, credentials)
+    .then(data => data)
     .catch((error) => {
       console.error(error);
     });
@@ -67,9 +62,10 @@ function Login({setToken}) {
       email: login.value(),
       password: password.value(),
     });
-    if (data && data.access_token && data.status) {
-      setToken(data.access_token);
-      localStorage.setItem('roles', data.roles);
+    if (data?.data?.access_token && data?.data?.status) {
+      setToken(data.data.access_token);
+      localStorage.setItem('roles', data.data.roles);
+      localStorage.setItem('token_expires', ((Date.now() + (parseInt(data.data.expires_in, 10)*1000))));
     }
   }
 

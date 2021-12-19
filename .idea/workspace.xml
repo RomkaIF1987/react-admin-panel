@@ -4,34 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32ad1b75-7872-4891-ab2d-f295b7bc54e7" name="Default Changelist" comment="First commit">
-      <change afterPath="$PROJECT_DIR$/cms/src/assets/icons/cms-logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cms/src/http-common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cms/src/services/baseCRUDService/baseCRUDService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cms/src/services/baseCRUDService/index.js" afterDir="false" />
+    <list default="true" id="32ad1b75-7872-4891-ab2d-f295b7bc54e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HeaderNavController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HeaderNavController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/StoreHeaderNavigationRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/StoreHeaderNavigationRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/cms/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cms/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cms/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/cms/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/src/components/useToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/components/useToken.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/containers/TheSidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/containers/TheSidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/src/containers/TheHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/containers/TheHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/src/containers/TheHeaderDropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/containers/TheHeaderDropdown.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/src/containers/_nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/containers/_nav.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/scss/_custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/scss/_custom.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/src/views/pages/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/pages/login/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/src/views/site/HeaderNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/site/HeaderNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/site/HeaderNavigationCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/site/HeaderNavigationCreate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/src/views/users/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/users/Users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +31,7 @@
     </execution>
   </component>
   <component name="EditorConfigPreviewManager">
-    <editorConfig file="$PROJECT_DIR$/cms/.editorconfig" previewFile="$PROJECT_DIR$/cms/src/views/site/HeaderNavigationCreate.js" />
+    <editorConfig file="$PROJECT_DIR$/cms/.editorconfig" previewFile="$PROJECT_DIR$/cms/src/containers/TheHeaderDropdown.js" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -62,8 +47,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="Roman Zhylyak &lt;45605216+romkaif1987@users.noreply.github.com&gt;" />
         <option value="Roman Zhyliak &lt;romka.if87@gmail.com&gt;" />
+        <option value="Roman Zhylyak &lt;45605216+romkaif1987@users.noreply.github.com&gt;" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -342,7 +327,9 @@
       <workItem from="1629015625679" duration="157000" />
       <workItem from="1629015852123" duration="26000" />
       <workItem from="1634380075874" duration="896000" />
-      <workItem from="1634465207350" duration="13322000" />
+      <workItem from="1634465207350" duration="13391000" />
+      <workItem from="1634501101560" duration="3113000" />
+      <workItem from="1634987892998" duration="3069000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1610281136953</created>
@@ -372,7 +359,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617550189388</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add login&#10;Add base CRUD Service">
+      <created>1634484772340</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1634484772340</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,7 +399,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+    <MESSAGE value="Add login&#10;Add base CRUD Service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add login&#10;Add base CRUD Service" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
