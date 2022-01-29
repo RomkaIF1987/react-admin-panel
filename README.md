@@ -1,1 +1,1 @@
-Laravel + Admin Panel
+Laravel + React Admin Panel
