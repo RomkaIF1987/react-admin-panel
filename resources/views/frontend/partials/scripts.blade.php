@@ -1,5 +1,5 @@
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="js/vendor/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
 
 <script src="js/isotope.pkgd.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -34,8 +34,6 @@
     google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 <script src="js/main.js"></script>
-
-<script src="showHide.js" type="text/javascript"></script>
 
 <script type="text/javascript">
     $(document).ready(function(){

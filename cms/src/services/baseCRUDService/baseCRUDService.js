@@ -5,7 +5,8 @@ class BaseCRUDService {
 
   constructor(apiUrl = '') {
     this.apiUrl = apiUrl;
-    this.token = JSON.parse(localStorage.getItem("token"))
+    const rzapInfo = JSON.parse(localStorage.getItem('rzapInfo'));
+    this.token = rzapInfo?.token;
     this.headers = {headers: {"Authorization" : `Bearer ${this.token}`}}
   }
 

@@ -30,6 +30,7 @@ const Users = () => {
   const [page, setPage] = useState(currentPage);
   const [users, setUsers] = useState([]);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(async () => {
     baseCRUDService.setApiUrl('/users');
     await baseCRUDService.getRecords()
@@ -43,22 +44,17 @@ const Users = () => {
     currentPage !== page && setPage(currentPage)
   }, [currentPage, page])
 
-  const styles = {
-    button: {
-      width: '150px',
-      float: 'right'
-    }
-  }
-
   return (
     <CRow>
       <CCol>
         <CCard>
           <CCardHeader>
-            Users
-            <div className="mb-3 mb-xl-0 col-sm-4 col-md-2 col-xl" style={styles.button}>
-              <CLink to='/site/header-navigation/create'
-                     className="btn btn-outline-success btn-block">Add New User</CLink>
+            <div className="d-flex justify-content-between">
+              <div className="d-flex align-items-center">Users</div>
+              <div className="d-flex align-items-center col-sm-4 col-md-2 col-xl max-w-150px min-w-150px">
+                <CLink to='/users/create'
+                       className="btn btn-outline-success btn-block">Add New User</CLink>
+              </div>
             </div>
           </CCardHeader>
           <CCardBody>
@@ -69,7 +65,6 @@ const Users = () => {
                 'email', 'roles', 'status', 'action'
               ]}
               hover
-              striped
               bordered
               size="sm"
               itemsPerPage={10}

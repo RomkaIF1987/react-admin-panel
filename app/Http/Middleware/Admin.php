@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class Admin
@@ -12,9 +13,9 @@ class Admin
      *
      * @param Request $request
      * @param Closure $next
-     * @return mixed
+     * @return JsonResponse|mixed
      */
-    public function handle(Request $request, Closure $next): mixed
+    public function handle(Request $request, Closure $next)
     {
         $user = auth()->user();
         if(empty($user) || !$user->hasRole('admin')){

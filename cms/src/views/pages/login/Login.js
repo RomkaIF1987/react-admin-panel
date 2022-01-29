@@ -64,8 +64,18 @@ function Login({setToken}) {
     });
     if (data?.data?.access_token && data?.data?.status) {
       setToken(data.data.access_token);
-      localStorage.setItem('roles', data.data.roles);
-      localStorage.setItem('token_expires', ((Date.now() + (parseInt(data.data.expires_in, 10)*1000))));
+      const localStorageData = {
+        roles: data.data.roles,
+        name: data.data.name,
+        tokenExpires: Date.now() + (parseInt(data.data.expires_in, 10)*1000)
+      };
+      let rzapInfo = JSON.parse(localStorage.getItem('rzapInfo'));
+      if (rzapInfo) {
+        rzapInfo = {...rzapInfo, ...localStorageData}
+      } else {
+        rzapInfo = localStorageData;
+      }
+      localStorage.setItem('rzapInfo', JSON.stringify(rzapInfo));
     }
   }
 

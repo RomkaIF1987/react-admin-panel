@@ -22,17 +22,6 @@ const getBadge = status => {
 }
 const fields = ['name', 'link_url', 'status', 'action']
 
-function handleErrors(response) {
-  if (!response.ok) {
-    if (response?.statusText === 'Unauthorized') {
-      localStorage.removeItem('token');
-      window.location.href = '/';
-    }
-    throw Error(response);
-  }
-  return response;
-}
-
 const Tables = (props) => {
   const [headerNavs, setHeaderNavs] = useState([])
 

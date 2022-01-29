@@ -10,8 +10,6 @@ import {
 } from '@coreui/react'
 import { DocsLink } from 'src/reusable'
 
-import usersData from '../../users/UsersData'
-
 const getBadge = status => {
   switch (status) {
     case 'Active': return 'success'

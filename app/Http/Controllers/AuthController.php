@@ -93,12 +93,13 @@ class AuthController extends Controller
      */
     protected function respondWithToken($token, $email): JsonResponse
     {
-        $user = User::select('menuroles as roles')->where('email', '=', $email)->first();
+        $user = User::select('menuroles as roles', 'name')->where('email', '=', $email)->first();
 
         return response()->json([
             'access_token' => $token,
             'token_type' => 'bearer',
             'expires_in' => auth()->factory()->getTTL() * 60,
+            'name' => $user->name,
             'roles' => $user->roles,
             'status' => true,
         ]);

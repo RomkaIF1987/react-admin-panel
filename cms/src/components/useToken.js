@@ -2,19 +2,25 @@ import {useState} from 'react';
 
 export default function useToken() {
   const getToken = () => {
-    const tokenString = localStorage.getItem('token');
-    return JSON.parse(tokenString)
+    const rzapInfo = JSON.parse(localStorage.getItem('rzapInfo'));
+    return rzapInfo?.token;
   };
 
   const [token, setToken] = useState(getToken());
+  let rzapInfo = JSON.parse(localStorage.getItem('rzapInfo'));
 
   const saveToken = userToken => {
-    localStorage.setItem('token', JSON.stringify(userToken));
+    if (rzapInfo) {
+      rzapInfo = {...rzapInfo, token: userToken}
+    } else {
+      rzapInfo = {token: userToken}
+    }
+    localStorage.setItem('rzapInfo', JSON.stringify(rzapInfo));
     setToken(userToken);
   };
 
-  if (localStorage.getItem('token_expires') && localStorage.getItem('token_expires') < Date.now()) {
-    localStorage.clear();
+  if (rzapInfo?.tokenExpires && rzapInfo.tokenExpires < Date.now()) {
+    localStorage.removeItem('rzapInfo');
     window.location.href = '/';
   }
 

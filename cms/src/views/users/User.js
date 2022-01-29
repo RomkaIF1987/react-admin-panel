@@ -1,36 +1,46 @@
 import React from 'react'
-import { CCard, CCardBody, CCardHeader, CCol, CRow } from '@coreui/react'
-import CIcon from '@coreui/icons-react'
-
-import usersData from './UsersData'
+import {CContainer, CCard, CCardBody, CRow, CCol, CForm, CFormGroup, CLabel, CInput, CFormText, CCardHeader} from '@coreui/react'
 
 const User = ({match}) => {
-  const user = usersData.find( user => user.id.toString() === match.params.id)
-  const userDetails = user ? Object.entries(user) : 
-    [['id', (<span><CIcon className="text-muted" name="cui-icon-ban" /> Not found</span>)]]
 
   return (
     <CRow>
-      <CCol lg={6}>
+      <CCol>
         <CCard>
           <CCardHeader>
-            User id: {match.params.id}
+            Create User
           </CCardHeader>
           <CCardBody>
-              <table className="table table-striped table-hover">
-                <tbody>
-                  {
-                    userDetails.map(([key, value], index) => {
-                      return (
-                        <tr key={index.toString()}>
-                          <td>{`${key}:`}</td>
-                          <td><strong>{value}</strong></td>
-                        </tr>
-                      )
-                    })
-                  }
-                </tbody>
-              </table>
+            <CContainer fluid>
+              <CRow>
+                <CCol sm="12">
+                  <CForm action="" method="post">
+                    <CFormGroup>
+                      <CLabel htmlFor="nf-email">Email</CLabel>
+                      <CInput
+                        type="email"
+                        id="nf-email"
+                        name="nf-email"
+                        placeholder="Enter Email.."
+                        autoComplete="email"
+                      />
+                      <CFormText className="help-block">Please enter your email</CFormText>
+                    </CFormGroup>
+                    <CFormGroup>
+                      <CLabel htmlFor="nf-password">Password</CLabel>
+                      <CInput
+                        type="password"
+                        id="nf-password"
+                        name="nf-password"
+                        placeholder="Enter Password.."
+                        autoComplete="current-password"
+                      />
+                      <CFormText className="help-block">Please enter your password</CFormText>
+                    </CFormGroup>
+                  </CForm>
+                </CCol>
+              </CRow>
+            </CContainer>
           </CCardBody>
         </CCard>
       </CCol>

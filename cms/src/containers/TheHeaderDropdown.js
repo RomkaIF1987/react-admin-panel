@@ -9,11 +9,13 @@ import {
 import CIcon from '@coreui/icons-react'
 
 function logout() {
-  localStorage.clear();
+  localStorage.removeItem('rzapInfo');
   window.location.href = '/';
 }
 
 function TheHeaderDropdown() {
+  const rzapInfo = JSON.parse(localStorage.getItem('rzapInfo'));
+  const name = rzapInfo?.name || '';
 
   return (
     <CDropdown
@@ -22,12 +24,12 @@ function TheHeaderDropdown() {
       direction="down"
     >
       <CDropdownToggle className="c-header-nav-link" caret={false}>
+        <div className='p-3'>Hi {name}</div>
         <div className="c-avatar">
-          <span className='p-3'>Hi Admin Admin</span>
           <CImg
-            src={'/avatars/6.jpg'}
+            src={'/avatars/default_avatar.png'}
             className="c-avatar-img"
-            alt="admin@bootstrapmaster.com"
+            alt="avatar"
           />
         </div>
       </CDropdownToggle>
