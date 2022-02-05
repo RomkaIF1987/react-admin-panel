@@ -1,12 +1,14 @@
-import TheContent from './TheContent'
-import TheFooter from './TheFooter'
-import TheHeader from './TheHeader'
-import TheHeaderDropdown from './TheHeaderDropdown'
-import TheHeaderDropdownMssg from './TheHeaderDropdownMssg'
-import TheHeaderDropdownNotif from './TheHeaderDropdownNotif'
-import TheHeaderDropdownTasks from './TheHeaderDropdownTasks'
-import TheLayout from './TheLayout'
-import TheSidebar from './TheSidebar'
+import TheContent from "./TheContent";
+import TheFooter from "./TheFooter";
+// eslint-disable-next-line import/no-cycle
+import TheHeader from "./TheHeader";
+import TheHeaderDropdown from "./TheHeaderDropdown";
+import TheHeaderDropdownMssg from "./TheHeaderDropdownMssg";
+import TheHeaderDropdownNotif from "./TheHeaderDropdownNotif";
+import TheHeaderDropdownTasks from "./TheHeaderDropdownTasks";
+// eslint-disable-next-line import/no-cycle
+import TheLayout from "./TheLayout";
+import TheSidebar from "./TheSidebar";
 
 export {
   TheContent,
@@ -17,5 +19,5 @@ export {
   TheHeaderDropdownNotif,
   TheHeaderDropdownTasks,
   TheLayout,
-  TheSidebar
-}
+  TheSidebar,
+};

@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import PropTypes from 'prop-types';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 import {
   CButton,
   CCard,
@@ -12,51 +12,51 @@ import {
   CInputGroup,
   CInputGroupPrepend,
   CInputGroupText,
-  CRow
-} from '@coreui/react'
-import CIcon from '@coreui/icons-react'
-import http, { baseApiURL } from '../../../http-common';
+  CRow,
+} from "@coreui/react";
+import CIcon from "@coreui/icons-react";
+import http, { baseApiURL } from "../../../http-common";
 
-function useLoginValue(defaultValue = '') {
-  const [login, setLogin] = useState(defaultValue)
+function useLoginValue(defaultValue = "") {
+  const [login, setLogin] = useState(defaultValue);
 
   return {
     bind: {
       login,
-      onChange: event => setLogin(event.target.value)
+      onChange: (event) => setLogin(event.target.value),
     },
-    clear: () => setLogin(''),
+    clear: () => setLogin(""),
     value: () => login,
-  }
+  };
 }
 
-function usePasswordValue(defaultValue = '') {
-  const [password, setPassword] = useState(defaultValue)
+function usePasswordValue(defaultValue = "") {
+  const [password, setPassword] = useState(defaultValue);
 
   return {
     bind: {
       password,
-      onChange: event => setPassword(event.target.value)
+      onChange: (event) => setPassword(event.target.value),
     },
-    clear: () => setPassword(''),
+    clear: () => setPassword(""),
     value: () => password,
-  }
+  };
 }
 
 async function loginUser(credentials) {
-  return http.post(`${baseApiURL}/login`, credentials)
-    .then(data => data)
+  return http
+    .post(`${baseApiURL}/login`, credentials)
+    .then((data) => data)
     .catch((error) => {
       console.error(error);
     });
 }
 
-function Login({setToken}) {
+function Login({ setToken }) {
+  const login = useLoginValue("");
+  const password = usePasswordValue("");
 
-  const login = useLoginValue('');
-  const password = usePasswordValue('');
-
-  const submitHandler = async e => {
+  const submitHandler = async (e) => {
     e.preventDefault();
     const data = await loginUser({
       email: login.value(),
@@ -67,17 +67,17 @@ function Login({setToken}) {
       const localStorageData = {
         roles: data.data.roles,
         name: data.data.name,
-        tokenExpires: Date.now() + (parseInt(data.data.expires_in, 10)*1000)
+        tokenExpires: Date.now() + parseInt(data.data.expires_in, 10) * 1000,
       };
-      let rzapInfo = JSON.parse(localStorage.getItem('rzapInfo'));
+      let rzapInfo = JSON.parse(localStorage.getItem("rzapInfo"));
       if (rzapInfo) {
-        rzapInfo = {...rzapInfo, ...localStorageData}
+        rzapInfo = { ...rzapInfo, ...localStorageData };
       } else {
         rzapInfo = localStorageData;
       }
-      localStorage.setItem('rzapInfo', JSON.stringify(rzapInfo));
+      localStorage.setItem("rzapInfo", JSON.stringify(rzapInfo));
     }
-  }
+  };
 
   return (
     <div className="c-app c-default-layout flex-row align-items-center">
@@ -96,7 +96,12 @@ function Login({setToken}) {
                           <CIcon name="cil-user" />
                         </CInputGroupText>
                       </CInputGroupPrepend>
-                      <CInput type="text" placeholder="Username" autoComplete="username" {...login.bind}/>
+                      <CInput
+                        type="text"
+                        placeholder="Username"
+                        autoComplete="username"
+                        {...login.bind}
+                      />
                     </CInputGroup>
                     <CInputGroup className="mb-4">
                       <CInputGroupPrepend>
@@ -104,14 +109,23 @@ function Login({setToken}) {
                           <CIcon name="cil-lock-locked" />
                         </CInputGroupText>
                       </CInputGroupPrepend>
-                      <CInput type="password" placeholder="Password" autoComplete="current-password" {...password.bind}/>
+                      <CInput
+                        type="password"
+                        placeholder="Password"
+                        autoComplete="current-password"
+                        {...password.bind}
+                      />
                     </CInputGroup>
                     <CRow>
                       <CCol xs="6">
-                        <CButton color="primary" className="px-4" type={'submit'}>Login</CButton>
+                        <CButton color="primary" className="px-4" type="submit">
+                          Login
+                        </CButton>
                       </CCol>
                       <CCol xs="6" className="text-right">
-                        <CButton color="link" className="px-0">Forgot password?</CButton>
+                        <CButton color="link" className="px-0">
+                          Forgot password?
+                        </CButton>
                       </CCol>
                     </CRow>
                   </CForm>
@@ -122,11 +136,11 @@ function Login({setToken}) {
         </CRow>
       </CContainer>
     </div>
-  )
+  );
 }
 
 Login.propTypes = {
-  setToken: PropTypes.func.isRequired
+  setToken: PropTypes.func.isRequired,
 };
 
-export default Login
+export default Login;

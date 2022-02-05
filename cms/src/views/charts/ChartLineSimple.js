@@ -1,10 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { getColor, deepObjectsMerge } from '@coreui/utils'
-import { CChartLine } from '@coreui/react-chartjs'
+import React from "react";
+import PropTypes from "prop-types";
+import { getColor, deepObjectsMerge } from "@coreui/utils";
+import { CChartLine } from "@coreui/react-chartjs";
 
-const ChartLineSimple = props => {
-
+function ChartLineSimple(props) {
   const {
     borderColor,
     backgroundColor,
@@ -13,18 +12,19 @@ const ChartLineSimple = props => {
     label,
     pointed,
     ...attributes
-  } = props
+  } = props;
 
-  const pointHoverColor = (()=>{
+  const pointHoverColor = (() => {
     if (pointHoverBackgroundColor) {
-      return pointHoverBackgroundColor
-    } else if (backgroundColor !== 'transparent') {
-      return backgroundColor
+      return pointHoverBackgroundColor;
     }
-    return borderColor
-  })()
+    if (backgroundColor !== "transparent") {
+      return backgroundColor;
+    }
+    return borderColor;
+  })();
 
-  const defaultDatasets = (()=>{
+  const defaultDatasets = (() => {
     return [
       {
         data: dataPoints,
@@ -32,91 +32,98 @@ const ChartLineSimple = props => {
         backgroundColor: getColor(backgroundColor),
         pointBackgroundColor: getColor(pointHoverColor),
         pointHoverBackgroundColor: getColor(pointHoverColor),
-        label
-      }
-    ]
-  })()
+        label,
+      },
+    ];
+  })();
 
-  const pointedOptions = (()=>{
+  const pointedOptions = (() => {
     return {
       scales: {
         xAxes: [
           {
             offset: true,
             gridLines: {
-              color: 'transparent',
-              zeroLineColor: 'transparent'
+              color: "transparent",
+              zeroLineColor: "transparent",
             },
             ticks: {
               fontSize: 2,
-              fontColor: 'transparent'
-            }
-          }
+              fontColor: "transparent",
+            },
+          },
         ],
         yAxes: [
           {
             display: false,
             ticks: {
               display: false,
+              // eslint-disable-next-line prefer-spread
               min: Math.min.apply(Math, dataPoints) - 5,
-              max: Math.max.apply(Math, dataPoints) + 5
-            }
-          }
-        ]
+              // eslint-disable-next-line prefer-spread
+              max: Math.max.apply(Math, dataPoints) + 5,
+            },
+          },
+        ],
       },
       elements: {
         line: {
-          borderWidth: 1
+          borderWidth: 1,
         },
         point: {
           radius: 4,
           hitRadius: 10,
-          hoverRadius: 4
-        }
-      }
-    }
-  })()
+          hoverRadius: 4,
+        },
+      },
+    };
+  })();
 
-  const straightOptions = (()=>{
+  const straightOptions = (() => {
     return {
       scales: {
-        xAxes: [{
-          display: false
-        }],
-        yAxes: [{
-          display: false
-        }]
+        xAxes: [
+          {
+            display: false,
+          },
+        ],
+        yAxes: [
+          {
+            display: false,
+          },
+        ],
       },
       elements: {
         line: {
-          borderWidth: 2
+          borderWidth: 2,
         },
         point: {
           radius: 0,
           hitRadius: 10,
-          hoverRadius: 4
-        }
-      }
-    }
-  })()
+          hoverRadius: 4,
+        },
+      },
+    };
+  })();
 
-  const defaultOptions = (()=>{
-    const options = pointed ? pointedOptions : straightOptions
-      return Object.assign({}, options, {
-        maintainAspectRatio: false,
-        legend: {
-          display: false
-        }
-      })
-  })()
+  const defaultOptions = (() => {
+    const options = pointed ? pointedOptions : straightOptions;
+    return {
+      ...options,
+      maintainAspectRatio: false,
+      legend: {
+        display: false,
+      },
+    };
+  })();
 
   const computedDatasets = (() => {
-    return deepObjectsMerge(defaultDatasets, attributes.datasets || {})
-  })()
+    return deepObjectsMerge(defaultDatasets, attributes.datasets || {});
+  })();
 
   const computedOptions = (() => {
-    return deepObjectsMerge(defaultOptions, attributes.options || {})
-  })()
+    return deepObjectsMerge(defaultOptions, attributes.options || {});
+  })();
 
   // render
 
@@ -127,7 +134,7 @@ const ChartLineSimple = props => {
       options={computedOptions}
       labels={label}
     />
-  )
+  );
 }
 
 ChartLineSimple.propTypes = {
@@ -139,14 +146,14 @@ ChartLineSimple.propTypes = {
   pointHoverBackgroundColor: PropTypes.string,
   dataPoints: PropTypes.array,
   label: PropTypes.string,
-  pointed: PropTypes.bool
+  pointed: PropTypes.bool,
 };
 
 ChartLineSimple.defaultProps = {
-  borderColor: 'rgba(255,255,255,.55)',
-  backgroundColor: 'transparent',
+  borderColor: "rgba(255,255,255,.55)",
+  backgroundColor: "transparent",
   dataPoints: [10, 22, 34, 46, 58, 70, 46, 23, 45, 78, 34, 12],
-  label: 'Sales'
+  label: "Sales",
 };
 
-export default ChartLineSimple
+export default ChartLineSimple;

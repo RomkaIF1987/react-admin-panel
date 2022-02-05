@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   CBreadcrumb,
   CBreadcrumbItem,
@@ -8,23 +8,23 @@ import {
   CCardHeader,
   CLink,
   CCol,
-  CRow
-} from '@coreui/react'
-import { DocsLink } from 'src/reusable'
-import routes from '../../../routes'
+  CRow,
+} from "@coreui/react";
+import { DocsLink } from "src/reusable";
+import routes from "../../../routes";
 
-const Breadcrumbs = () => {
+function Breadcrumbs() {
   return (
     <CRow>
       <CCol xs="12">
         <CCard>
           <CCardHeader>
             Bootstrap Breadcrumb
-            <DocsLink name="CBreadcrumb"/>
+            <DocsLink name="CBreadcrumb" />
           </CCardHeader>
           <CCardBody>
             <h6>CBreadcrumbRouter wrapper component</h6>
-            <CBreadcrumbRouter routes={routes}/>
+            <CBreadcrumbRouter routes={routes} />
             <h6>Manual</h6>
             <CBreadcrumb>
               <CBreadcrumbItem>
@@ -59,7 +59,7 @@ const Breadcrumbs = () => {
         </CCard>
       </CCol>
     </CRow>
-  )
+  );
 }
 
-export default Breadcrumbs
+export default Breadcrumbs;

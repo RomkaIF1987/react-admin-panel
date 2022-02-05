@@ -1,7 +1,3 @@
-import { sygnet } from './sygnet'
-import { logo } from './logo'
-import { logoNegative } from './logo-negative'
-
 import {
   cibSkype,
   cibFacebook,
@@ -26,17 +22,13 @@ import {
   cibStripe,
   cibPaypal,
   cibGooglePay,
-  cibCcAmex
-} from '@coreui/icons'
-import {
+  cibCcAmex,
   cifUs,
   cifBr,
   cifIn,
   cifFr,
   cifEs,
-  cifPl
-} from '@coreui/icons'
-import {
+  cifPl,
   cilAlignCenter,
   cilAlignLeft,
   cilAlignRight,
@@ -128,14 +120,17 @@ import {
   cilUserUnfollow,
   cilX,
   cilXCircle,
-  cilWarning
-} from '@coreui/icons'
+  cilWarning,
+} from "@coreui/icons";
+import { sygnet } from "./sygnet";
+import { logo } from "./logo";
+import { logoNegative } from "./logo-negative";
 
-export const icons = Object.assign({}, {
+// eslint-disable-next-line import/prefer-default-export
+export const icons = {
   sygnet,
   logo,
-  logoNegative
-}, {
+  logoNegative,
   cilAlignCenter,
   cilAlignLeft,
   cilAlignRight,
@@ -227,15 +222,13 @@ export const icons = Object.assign({}, {
   cilUserUnfollow,
   cilX,
   cilXCircle,
-  cilWarning
-}, {
+  cilWarning,
   cifUs,
   cifBr,
   cifIn,
   cifFr,
   cifEs,
-  cifPl
-}, {
+  cifPl,
   cibSkype,
   cibFacebook,
   cibTwitter,
@@ -259,5 +252,5 @@ export const icons = Object.assign({}, {
   cibStripe,
   cibPaypal,
   cibGooglePay,
-  cibCcAmex
-})
+  cibCcAmex,
+};

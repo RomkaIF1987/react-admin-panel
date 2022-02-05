@@ -1,33 +1,33 @@
-import React from 'react'
-import CIcon from '@coreui/icons-react'
+import React from "react";
+import CIcon from "@coreui/icons-react";
 
-const _nav =  [
+const _nav = [
   {
-    _tag: 'CSidebarNavItem',
-    name: 'Dashboard',
-    to: '/dashboard',
-    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
+    _tag: "CSidebarNavItem",
+    name: "Dashboard",
+    to: "/dashboard",
+    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon" />,
   },
-   {
-    _tag: 'CSidebarNavItem',
-    name: 'Users',
-    to: '/users',
-    icon: 'cil-user',
+  {
+    _tag: "CSidebarNavItem",
+    name: "Users",
+    to: "/users",
+    icon: "cil-user",
   },
-    {
-        _tag: 'CSidebarNavDropdown',
-        name: 'Global Settings',
-        route: '/global-settings',
-        icon: 'cil-settings',
-        _children: [
-            {
-                _tag: 'CSidebarNavItem',
-                name: 'Header Navigation',
-                to: '/global-settings/header-navigation',
-            }
-        ]
-    }
-  /*{
+  {
+    _tag: "CSidebarNavDropdown",
+    name: "Global Settings",
+    route: "/global-settings",
+    icon: "cil-settings",
+    _children: [
+      {
+        _tag: "CSidebarNavItem",
+        name: "Header Navigation",
+        to: "/global-settings/header-navigation",
+      },
+    ],
+  },
+  /* {
     _tag: 'CSidebarNavItem',
     name: 'Header Navigation',
     to: '/site/header-navigation',
@@ -328,6 +328,6 @@ const _nav =  [
     _tag: 'CSidebarNavDivider',
     className: 'm-2'
   }*/
-]
+];
 
-export default _nav
+export default _nav;
