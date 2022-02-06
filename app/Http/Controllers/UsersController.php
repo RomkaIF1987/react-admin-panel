@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Contracts\UserRepositoryInterface;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\User;
@@ -10,13 +12,18 @@ class UsersController extends Controller
 {
 
     /**
-     * Create a new controller instance.
-     *
-     * @return void
+     * @var UserRepositoryInterface
      */
-    public function __construct()
+    private UserRepositoryInterface $userRepository;
+
+    /**
+     * UserController constructor.
+     *
+     * @param UserRepositoryInterface $userRepository
+     */
+    public function __construct(UserRepositoryInterface $userRepository)
     {
-        $this->middleware('auth:api');
+        $this->userRepository = $userRepository;
     }
 
     /**
@@ -37,16 +44,13 @@ class UsersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param User $user
+     * @return JsonResponse
      */
-    public function show($id)
+    public function show(Request $request, User $user): JsonResponse
     {
-        $user = DB::table('users')
-        ->select('users.id', 'users.name', 'users.email', 'users.menuroles as roles', 'users.status', 'users.email_verified_at as registered')
-        ->where('users.id', '=', $id)
-        ->first();
-        return response()->json( $user );
+        return $this->userRepository->getUser($request, $user);
     }
 
     /**

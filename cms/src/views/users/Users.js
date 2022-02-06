@@ -96,7 +96,7 @@ function Users() {
                   <td width="15%">
                     <div className="btn-group" role="group">
                       <a
-                        href={`/users/${item.id}`}
+                        href={`#/users/${item.id}`}
                         className="btn"
                         type="button"
                       >

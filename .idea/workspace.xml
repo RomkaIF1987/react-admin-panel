@@ -4,90 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32ad1b75-7872-4891-ab2d-f295b7bc54e7" name="Default Changelist" comment="Add Users List">
-      <change afterPath="$PROJECT_DIR$/cms/.eslintignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cms/.eslintrc" afterDir="false" />
+    <list default="true" id="32ad1b75-7872-4891-ab2d-f295b7bc54e7" name="Default Changelist" comment="add eslint">
+      <change afterPath="$PROJECT_DIR$/app/Contracts/UserRepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/User/UserCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/User/UserResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/UserRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cms/src/components/Form/RInput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cms/src/components/Form/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cms/src/scss/_form.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cms/src/views/users/services/usersService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cms/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ide_helper_models.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ide_helper_models.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/cms/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/assets/icons/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/assets/icons/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/assets/icons/logo-negative.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/assets/icons/logo-negative.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/assets/icons/logo.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/assets/icons/logo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/assets/icons/sygnet.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/assets/icons/sygnet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/components/useToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/components/useToken.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/containers/TheContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/containers/TheContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/containers/TheFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/containers/TheFooter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/containers/TheHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/containers/TheHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/containers/TheHeaderDropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/containers/TheHeaderDropdown.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/containers/TheHeaderDropdownMssg.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/containers/TheHeaderDropdownMssg.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/containers/TheHeaderDropdownNotif.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/containers/TheHeaderDropdownNotif.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/containers/TheHeaderDropdownTasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/containers/TheHeaderDropdownTasks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/containers/TheLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/containers/TheLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/containers/TheSidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/containers/TheSidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/containers/_nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/containers/_nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/containers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/containers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/src/components/useToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/services/useToken.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/src/http-common.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/http-common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/polyfill.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/polyfill.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/reusable/DocsLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/reusable/DocsLink.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/reusable/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/reusable/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/serviceWorker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/services/baseCRUDService/baseCRUDService.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/services/baseCRUDService/baseCRUDService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/services/baseCRUDService/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/services/baseCRUDService/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/setupTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/breadcrumbs/Breadcrumbs.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/base/breadcrumbs/Breadcrumbs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/cards/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/base/cards/Cards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/carousels/Carousels.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/base/carousels/Carousels.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/collapses/Collapses.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/base/collapses/Collapses.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/forms/BasicForms.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/base/forms/BasicForms.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/base/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/jumbotrons/Jumbotrons.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/base/jumbotrons/Jumbotrons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/list-groups/ListGroups.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/base/list-groups/ListGroups.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/navbars/Navbars.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/base/navbars/Navbars.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/navs/Navs.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/base/navs/Navs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/paginations/Pagnations.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/base/paginations/Pagnations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/popovers/Popovers.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/base/popovers/Popovers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/progress-bar/ProgressBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/base/progress-bar/ProgressBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/switches/Switches.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/base/switches/Switches.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/tables/Tables.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/base/tables/Tables.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/tabs/Tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/base/tabs/Tabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/base/tooltips/Tooltips.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/base/tooltips/Tooltips.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/buttons/brand-buttons/BrandButtons.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/buttons/brand-buttons/BrandButtons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/buttons/button-dropdowns/ButtonDropdowns.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/buttons/button-dropdowns/ButtonDropdowns.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/buttons/button-groups/ButtonGroups.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/buttons/button-groups/ButtonGroups.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/buttons/buttons/Buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/buttons/buttons/Buttons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/buttons/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/buttons/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/charts/ChartBarSimple.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/charts/ChartBarSimple.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/charts/ChartLineSimple.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/charts/ChartLineSimple.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/charts/Charts.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/charts/Charts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/charts/MainChartExample.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/charts/MainChartExample.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/dashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/icons/brands/Brands.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/icons/brands/Brands.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/icons/coreui-icons/CoreUIIcons.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/icons/coreui-icons/CoreUIIcons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/icons/flags/Flags.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/icons/flags/Flags.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/icons/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/icons/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/notifications/alerts/Alerts.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/notifications/alerts/Alerts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/notifications/badges/Badges.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/notifications/badges/Badges.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/notifications/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/notifications/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/notifications/modals/Modals.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/notifications/modals/Modals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/notifications/toaster/Toaster.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/notifications/toaster/Toaster.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/pages/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/pages/login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/pages/page404/Page404.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/pages/page404/Page404.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/pages/page500/Page500.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/pages/page500/Page500.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/pages/register/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/pages/register/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/site/HeaderNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/site/HeaderNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/site/HeaderNavigationCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/site/HeaderNavigationCreate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/theme/colors/Colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/theme/colors/Colors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/theme/typography/Typography.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/theme/typography/Typography.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/scss/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/src/views/users/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/users/User.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/src/views/users/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/users/Users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/widgets/Widgets.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/widgets/Widgets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/widgets/WidgetsBrand.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/widgets/WidgetsBrand.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/widgets/WidgetsDropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/widgets/WidgetsDropdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +45,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="composer.json" />
+        <option value="SCSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -313,7 +252,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/cms" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Resources/User" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -331,18 +271,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Resources/User" />
+      <recent name="$PROJECT_DIR$/app/Repositories" />
+      <recent name="$PROJECT_DIR$/app/Contracts" />
+      <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/cms" />
-      <recent name="$PROJECT_DIR$/cms/src/assets/icons" />
-      <recent name="$PROJECT_DIR$/cms/src" />
-      <recent name="$PROJECT_DIR$/cms/src/views/site" />
-      <recent name="$PROJECT_DIR$/app/Repositories/HeaderNavigation" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cms/src/services" />
       <recent name="$PROJECT_DIR$/cms/public/avatars" />
       <recent name="$PROJECT_DIR$/cms/src/views/site" />
       <recent name="$PROJECT_DIR$/cms/src/views/site/header-navigation-create" />
       <recent name="$PROJECT_DIR$/cms/src/views/site/header-navigation" />
-      <recent name="$PROJECT_DIR$/app/Http/Resources/HeaderNavigation" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -434,7 +374,8 @@
       <workItem from="1643833935533" duration="24000" />
       <workItem from="1643833979609" duration="824000" />
       <workItem from="1643834825558" duration="1113000" />
-      <workItem from="1644096422590" duration="6688000" />
+      <workItem from="1644096422590" duration="6777000" />
+      <workItem from="1644137739337" duration="12892000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1610281136953</created>
@@ -478,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643493156510</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add eslint">
+      <created>1644103141326</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1644103141326</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,7 +460,8 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="Add login&#10;Add base CRUD Service" />
     <MESSAGE value="Add Users List" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Users List" />
+    <MESSAGE value="add eslint" />
+    <option name="LAST_COMMIT_MESSAGE" value="add eslint" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

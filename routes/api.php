@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 
 Route::get('test', 'MenuEditController@index');
 
-Route::group(['middleware' => 'api'], function ($router) {
+Route::middleware(['api'])->group(function () {
     Route::get('menu', 'MenuController@index');
 
     Route::get('header-nav/parent-items', [HeaderNavController::class, 'parentItems']);
@@ -30,7 +30,7 @@ Route::group(['middleware' => 'api'], function ($router) {
 
     Route::resource('resource/{table}/resource', 'ResourceController');
 
-    Route::group(['middleware' => 'admin'], function ($router) {
+    Route::middleware(['admin', 'auth:api'])->group(function() {
 
         Route::resource('mail', 'MailController');
         Route::get('prepareSend/{id}', 'MailController@prepareSend')->name('prepareSend');
@@ -42,7 +42,7 @@ Route::group(['middleware' => 'api'], function ($router) {
 
         Route::resource('users', 'UsersController')->except(['create', 'store']);
 
-        Route::prefix('menu/menu')->group(function () {
+        Route::prefix('menu/menu')->group(function() {
             Route::get('/', 'MenuEditController@index')->name('menu.menu.index');
             Route::get('/create', 'MenuEditController@create')->name('menu.menu.create');
             Route::post('/store', 'MenuEditController@store')->name('menu.menu.store');
@@ -50,7 +50,7 @@ Route::group(['middleware' => 'api'], function ($router) {
             Route::post('/update', 'MenuEditController@update')->name('menu.menu.update');
             Route::get('/delete', 'MenuEditController@delete')->name('menu.menu.delete');
         });
-        Route::prefix('menu/element')->group(function () {
+        Route::prefix('menu/element')->group(function() {
             Route::get('/', 'MenuElementController@index')->name('menu.index');
             Route::get('/move-up', 'MenuElementController@moveUp')->name('menu.up');
             Route::get('/move-down', 'MenuElementController@moveDown')->name('menu.down');
@@ -62,7 +62,7 @@ Route::group(['middleware' => 'api'], function ($router) {
             Route::get('/show', 'MenuElementController@show')->name('menu.show');
             Route::get('/delete', 'MenuElementController@delete')->name('menu.delete');
         });
-        Route::prefix('media')->group(function ($router) {
+        Route::prefix('media')->group(function() {
             Route::get('/', 'MediaController@index')->name('media.folder.index');
             Route::get('/folder/store', 'MediaController@folderAdd')->name('media.folder.add');
             Route::post('/folder/update', 'MediaController@folderUpdate')->name('media.folder.update');

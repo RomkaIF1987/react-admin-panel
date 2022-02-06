@@ -1,7 +1,7 @@
 import React from "react";
 import { HashRouter, Route, Switch } from "react-router-dom";
 import "./scss/style.scss";
-import useToken from "./components/useToken";
+import useToken from "./services/useToken";
 
 const loading = (
   <div className="pt-3 text-center">
