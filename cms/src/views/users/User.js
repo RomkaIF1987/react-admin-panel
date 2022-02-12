@@ -14,8 +14,9 @@ import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useParams } from "react-router-dom";
-import { RInput } from "../../components/Form";
+import { RInput, RSelect, RToggle } from "../../components/Form";
 import usersService from "./services/usersService";
+import baseCRUDService from "../../services/baseCRUDService";
 
 function User() {
   const validationSchema = yup.object({
@@ -55,10 +56,15 @@ function User() {
   useEffect(() => {
     setValue("name", user?.name || "");
     setValue("email", user?.email || "");
+    setValue("password", user?.password || "");
+    setValue("role", user?.role || "");
     // eslint-disable-next-line
   }, [user]);
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    baseCRUDService.setApiUrl("/users");
+    baseCRUDService.storeRecord(data);
+  };
 
   return (
     <CRow>
@@ -93,7 +99,6 @@ function User() {
                           />
                         )}
                       />
-                      {/* <CFormText className="help-block">Please enter your email</CFormText>*/}
                     </CFormGroup>
                     <CFormGroup>
                       <Controller
@@ -132,6 +137,51 @@ function User() {
                             autoComplete="password"
                             error={!!errors.password}
                             errorText={errors?.password?.message}
+                          />
+                        )}
+                      />
+                    </CFormGroup>
+                    <CFormGroup>
+                      <Controller
+                        name="role"
+                        control={control}
+                        defaultValue=""
+                        render={({ field: { value, onChange } }) => (
+                          <RSelect
+                            label="Role"
+                            id="role"
+                            name="role"
+                            type="role"
+                            onChange={onChange}
+                            value={value}
+                            error={!!errors.role}
+                            errorText={errors?.role?.message}
+                            options={[
+                              {
+                                label: "admin",
+                                value: "admin",
+                              },
+                              {
+                                label: "super admin",
+                                value: "superadmin",
+                              },
+                            ]}
+                          />
+                        )}
+                      />
+                    </CFormGroup>
+                    <CFormGroup>
+                      <Controller
+                        name="status"
+                        control={control}
+                        defaultValue={false}
+                        render={({ field: { value, onChange } }) => (
+                          <RToggle
+                            label="Status"
+                            id="status"
+                            name="status"
+                            onChange={onChange}
+                            value={value}
                           />
                         )}
                       />

@@ -56,16 +56,23 @@ class UsersController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return JsonResponse
      */
-    public function edit($id)
+    public function store(Request $request)
     {
-        $user = DB::table('users')
-        ->select('users.id', 'users.name', 'users.email', 'users.menuroles as roles', 'users.status')
-        ->where('users.id', '=', $id)
-        ->first();
-        return response()->json( $user );
+        $validatedData = $request->validate([
+            'name'       => 'required|min:1|max:256',
+            'email'      => 'required|email|max:256'
+        ]);
+        $user = new User();
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->password = $request->input('password');
+        $user->status = $request->input('status');
+        $user->save();
+        //$request->session()->flash('message', 'Successfully updated user');
+        return response()->json( ['status' => 'success'] );
     }
 
     /**

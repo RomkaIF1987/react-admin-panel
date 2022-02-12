@@ -40,7 +40,7 @@ Route::middleware(['api'])->group(function () {
 
         Route::resource('bread', 'BreadController');   //create BREAD (resource)
 
-        Route::resource('users', 'UsersController')->except(['create', 'store']);
+        Route::resource('users', 'UsersController')->except(['create', 'edit']);
 
         Route::prefix('menu/menu')->group(function() {
             Route::get('/', 'MenuEditController@index')->name('menu.menu.index');

@@ -1,9 +1,10 @@
 import React, { forwardRef } from "react";
-import { CInput, CLabel, CFormText } from "@coreui/react";
+import { CSelect, CLabel, CFormText } from "@coreui/react";
 
-const RInput = forwardRef(
+const RSelect = forwardRef(
   (
     {
+      options,
       className = "",
       label,
       id,
@@ -19,7 +20,12 @@ const RInput = forwardRef(
     return (
       <>
         <CLabel htmlFor={id}>{label}</CLabel>
-        <CInput {...props} type={type} id={id} invalid={error} />
+        <CSelect {...props} type={type} id={id} invalid={error} custom>
+          {options &&
+            options.map((option, index) => (
+              <option key={index} value={option.value}>{option.label}</option>
+            ))}
+        </CSelect>
         {helperBlock && helperText && !error && (
           <CFormText className="help-block">Please enter your email</CFormText>
         )}
@@ -31,4 +37,4 @@ const RInput = forwardRef(
   }
 );
 
-export default RInput;
+export default RSelect;

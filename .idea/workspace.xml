@@ -4,27 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32ad1b75-7872-4891-ab2d-f295b7bc54e7" name="Default Changelist" comment="add eslint">
-      <change afterPath="$PROJECT_DIR$/app/Contracts/UserRepositoryInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/User/UserCollection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/User/UserResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/UserRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cms/src/components/Form/RInput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cms/src/components/Form/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cms/src/scss/_form.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cms/src/views/users/services/usersService.js" afterDir="false" />
+    <list default="true" id="32ad1b75-7872-4891-ab2d-f295b7bc54e7" name="Default Changelist" comment="add User edit">
+      <change afterPath="$PROJECT_DIR$/cms/src/components/Form/RSelect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cms/src/components/Form/RToggle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_ide_helper_models.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ide_helper_models.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/cms/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/components/useToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/services/useToken.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/http-common.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/http-common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/scss/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/src/components/Form/RInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/components/Form/RInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/src/components/Form/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/components/Form/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/src/views/users/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/users/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/views/users/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/users/Users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -252,7 +239,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Resources/User" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -271,11 +258,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cms/src/components/Form" />
       <recent name="$PROJECT_DIR$/app/Http/Resources/User" />
       <recent name="$PROJECT_DIR$/app/Repositories" />
       <recent name="$PROJECT_DIR$/app/Contracts" />
       <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$/cms" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/cms/src/services" />
@@ -375,7 +362,9 @@
       <workItem from="1643833979609" duration="824000" />
       <workItem from="1643834825558" duration="1113000" />
       <workItem from="1644096422590" duration="6777000" />
-      <workItem from="1644137739337" duration="12892000" />
+      <workItem from="1644137739337" duration="12951000" />
+      <workItem from="1644265798263" duration="4837000" />
+      <workItem from="1644435393035" duration="87000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1610281136953</created>
@@ -426,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644103141326</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add User edit">
+      <created>1644153260732</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1644153260732</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +457,8 @@
     <MESSAGE value="Add login&#10;Add base CRUD Service" />
     <MESSAGE value="Add Users List" />
     <MESSAGE value="add eslint" />
-    <option name="LAST_COMMIT_MESSAGE" value="add eslint" />
+    <MESSAGE value="add User edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="add User edit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
