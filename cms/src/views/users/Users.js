@@ -15,17 +15,12 @@ import CIcon from "@coreui/icons-react";
 import baseCRUDService from "../../services/baseCRUDService/baseCRUDService";
 
 const getBadge = (status) => {
+  console.log(status);
   switch (status) {
-    case "Active":
+    case "1":
       return "success";
-    case "Inactive":
-      return "secondary";
-    case "Pending":
-      return "warning";
-    case "Banned":
-      return "danger";
     default:
-      return "primary";
+      return "secondary";
   }
 };
 
@@ -86,8 +81,8 @@ function Users() {
                 // eslint-disable-next-line react/no-unstable-nested-components
                 status: (item) => (
                   <td>
-                    <CBadge color={getBadge(item.show)}>
-                      {getBadge(item.show)}
+                    <CBadge color={getBadge(item.status)}>
+                      {item.status === "1" ? "Active" : "Inactive"}
                     </CBadge>
                   </td>
                 ),

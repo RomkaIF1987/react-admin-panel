@@ -13,8 +13,8 @@ import {
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { useParams } from "react-router-dom";
-import { RInput, RSelect, RToggle } from "../../components/Form";
+import { useParams, useHistory } from "react-router-dom";
+import { RImageInput, RInput, RSelect, RToggle } from "../../components/Form";
 import usersService from "./services/usersService";
 import baseCRUDService from "../../services/baseCRUDService";
 
@@ -29,6 +29,7 @@ function User() {
   });
 
   const { id } = useParams();
+  const history = useHistory();
   const formData = useForm({
     resolver: yupResolver(validationSchema),
     mode: "onSubmit",
@@ -54,16 +55,23 @@ function User() {
     }, []);
 
   useEffect(() => {
+    setValue("avatar", user?.avatar || "");
     setValue("name", user?.name || "");
     setValue("email", user?.email || "");
     setValue("password", user?.password || "");
     setValue("role", user?.role || "");
+    setValue("status", user?.status || "");
     // eslint-disable-next-line
   }, [user]);
 
   const onSubmit = (data) => {
     baseCRUDService.setApiUrl("/users");
-    baseCRUDService.storeRecord(data);
+    const formDataInitial = new FormData();
+    baseCRUDService
+      .storeRecord(baseCRUDService.buildFormData(formDataInitial, data))
+      .then(() => {
+        history.push("/users");
+      });
   };
 
   return (
@@ -72,14 +80,36 @@ function User() {
         <CCard>
           <CCardHeader>{id ? "Edit User" : "Create New User"}</CCardHeader>
           <CCardBody>
-            <CContainer fluid>
-              <CRow>
-                <CCol sm="12">
-                  <CForm
-                    action=""
-                    method="post"
-                    onSubmit={handleSubmit(onSubmit)}
-                  >
+            <CForm action="" method="post" onSubmit={handleSubmit(onSubmit)}>
+              <CContainer fluid>
+                <CRow>
+                  <CCol sm="6">
+                    <CFormGroup>
+                      <Controller
+                        name="avatar"
+                        control={control}
+                        render={({ field: { value, onChange, name } }) => (
+                          <RImageInput
+                            label="Avatar"
+                            id="avatar"
+                            name={name}
+                            type="file"
+                            onChange={(e) => {
+                              onChange(e);
+                              if (!e) {
+                                setValue(name, e);
+                              }
+                            }}
+                            value={value}
+                            placeholder="Choose Photo"
+                            error={!!errors.avatar}
+                            errorText={errors?.avatar?.message}
+                          />
+                        )}
+                      />
+                    </CFormGroup>
+                  </CCol>
+                  <CCol sm="6">
                     <CFormGroup>
                       <Controller
                         name="name"
@@ -100,6 +130,10 @@ function User() {
                         )}
                       />
                     </CFormGroup>
+                  </CCol>
+                </CRow>
+                <CRow>
+                  <CCol sm="6">
                     <CFormGroup>
                       <Controller
                         name="email"
@@ -120,6 +154,8 @@ function User() {
                         )}
                       />
                     </CFormGroup>
+                  </CCol>
+                  <CCol sm="6">
                     <CFormGroup>
                       <Controller
                         name="password"
@@ -141,6 +177,10 @@ function User() {
                         )}
                       />
                     </CFormGroup>
+                  </CCol>
+                </CRow>
+                <CRow>
+                  <CCol sm="6">
                     <CFormGroup>
                       <Controller
                         name="role"
@@ -170,6 +210,8 @@ function User() {
                         )}
                       />
                     </CFormGroup>
+                  </CCol>
+                  <CCol sm="6">
                     <CFormGroup>
                       <Controller
                         name="status"
@@ -186,13 +228,13 @@ function User() {
                         )}
                       />
                     </CFormGroup>
-                    <CButton type="submit" color="primary">
-                      Submit
-                    </CButton>
-                  </CForm>
-                </CCol>
-              </CRow>
-            </CContainer>
+                  </CCol>
+                </CRow>
+                <CButton type="submit" color="primary">
+                  Submit
+                </CButton>
+              </CContainer>
+            </CForm>
           </CCardBody>
         </CCard>
       </CCol>

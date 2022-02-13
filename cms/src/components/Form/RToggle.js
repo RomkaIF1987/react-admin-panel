@@ -4,11 +4,11 @@ import { CSwitch, CLabel } from "@coreui/react";
 const RToggle = forwardRef(
   ({ className = "", label, id, color = "dark", ...props }, ref) => {
     return (
-      <div className="d-flex flex-column justify-content-flex-start my-4">
+      <div className="d-flex flex-column justify-content-flex-start">
         <CLabel className="pr-3" htmlFor={id}>
           {label}
         </CLabel>
-        <div className="d-flex justify-content-start">
+        <div className="d-flex switch-input">
           <CSwitch {...props} color={color} variant="3d" />
           <span className="pl-3">{props.value ? "Active" : "Inactive"}</span>
         </div>

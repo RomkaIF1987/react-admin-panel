@@ -7,6 +7,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Storage;
 
 class UsersController extends Controller
 {
@@ -66,12 +67,22 @@ class UsersController extends Controller
             'email'      => 'required|email|max:256'
         ]);
         $user = new User();
+        if ($request->hasFile('avatar.file')) {
+            $file = $request->file('avatar.file');
+            $fileName = str_replace('.' . $file->extension(), '', $file->hashName()) . '.' . $file->getClientOriginalExtension();
+            $importFilePath = Storage::disk('local')->putFileAs('public/avatars', $file, $fileName);
+            $file_data['orig_file_name'] = $file->getClientOriginalName();
+            $file_data['file_name'] = basename($importFilePath);
+            $file_data['file_path'] = $importFilePath;
+            $user->avatar_data = $file_data;
+        }
         $user->name = $request->input('name');
         $user->email = $request->input('email');
         $user->password = $request->input('password');
+        $user->menuroles = $request->input('role');
         $user->status = $request->input('status');
         $user->save();
-        //$request->session()->flash('message', 'Successfully updated user');
+//        $request->session()->flash('message', 'Successfully updated user');
         return response()->json( ['status' => 'success'] );
     }
 

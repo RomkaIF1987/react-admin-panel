@@ -5,3 +5,11 @@
   font-size: .875em;
   color: #dc3545 !important;
 }
+
+.form-control, .custom-select, .switch-input {
+height: calc(1.5em + 1rem + 5px);
+}
+
+.switch-input {
+  align-items: center;
+}

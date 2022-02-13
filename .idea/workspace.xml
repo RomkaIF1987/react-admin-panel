@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32ad1b75-7872-4891-ab2d-f295b7bc54e7" name="Default Changelist" comment="add User edit">
-      <change afterPath="$PROJECT_DIR$/cms/src/components/Form/RSelect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cms/src/components/Form/RToggle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cms/src/components/Form/RImageInput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2022_02_13_135608_add_avatar_data_field_to_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/src/components/Form/RInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/components/Form/RInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/src/components/Form/RToggle.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/components/Form/RToggle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/src/components/Form/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/components/Form/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/src/scss/_form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/scss/_form.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/src/views/users/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/users/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/src/views/users/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/src/views/users/Users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,10 +73,23 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/composer.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/routes/api.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cms/src/components/Form/RImageInput.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/Models/User.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/database/migrations/2022_02_13_135608_add_avatar_data_field_to_users_table.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cms/src/services/baseCRUDService/baseCRUDService.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cms/src/components/Form/RInput.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/config/filesystems.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cms/src/components/Form/index.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cms/src/scss/_form.scss" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cms/src/components/Form/RToggle.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cms/src/views/users/Users.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/public/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cms/src/views/users/User.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/database/seeders/DefaultAdminSeeder.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/routes/web.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -239,7 +254,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cms/src/components/Form" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -252,17 +267,17 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v14.17.0/bin/node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/cms/src/components/Form" />
+      <recent name="$PROJECT_DIR$/cmsNew" />
+      <recent name="$PROJECT_DIR$/cmsNew/src" />
       <recent name="$PROJECT_DIR$/app/Http/Resources/User" />
       <recent name="$PROJECT_DIR$/app/Repositories" />
-      <recent name="$PROJECT_DIR$/app/Contracts" />
-      <recent name="$PROJECT_DIR$/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/cms/src/services" />
@@ -279,14 +294,11 @@
       <command value="open react-test.loc" />
       <command value="open jewelry.loc" />
       <command value="open goryzonty2.loc" />
+      <command value="open /var/www/nsa.loc" />
       <command value="open ~/www/nsa.loc" />
     </option>
   </component>
-  <component name="RunManager" selected="npm.start">
-    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner scope="XML" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/cms/package.json" />
       <command value="start" />
@@ -294,10 +306,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="npm.start" />
-      <item itemvalue="PHPUnit.phpunit.xml" />
-    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -365,6 +373,8 @@
       <workItem from="1644137739337" duration="12951000" />
       <workItem from="1644265798263" duration="4837000" />
       <workItem from="1644435393035" duration="87000" />
+      <workItem from="1644770555395" duration="231000" />
+      <workItem from="1644785901006" duration="2120000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1610281136953</created>
